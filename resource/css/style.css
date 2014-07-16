@@ -1,0 +1,48 @@
+#footer{
+	border-top: 2px solid gray;
+}
+
+.navbar-inner-block{
+	background-color: #333333;
+}
+
+.navbar .brand{
+	display: block;
+float: left;
+padding: 10px 20px 10px;
+margin-left: -20px;
+font-size: 49px;
+font-weight: 200;
+color: white;
+text-shadow: none;
+line-height: 33px;
+}
+
+.navbar .nav>li>a{
+	float: none;
+padding: 10px 15px 10px;
+color: white;
+text-decoration: none;
+text-shadow: none;
+}
+
+.navbar .nav>li>a:hover{
+	float: none;
+padding: 10px 15px 10px;
+color: white;
+text-decoration: none;
+text-shadow: 0 1px 0 #fff;
+}
+
+.navbar-inner-block{
+	height:58px;
+}
+
+.navbar .nav{
+	margin-top: 9px;
+}
+
+.map{
+	height:370px;
+	width: 575px;
+}
