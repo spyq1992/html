@@ -15,7 +15,7 @@
 			    <div class="active item">
 			    	<img src="<?=base_url('resource/images/carousel/bg1.jpg') ?>">
 			    	<div class="carousel-caption">
-                      <h4>聚会神器</h4>
+                      <h4>聚会神器-zwtest</h4>
                       <p>关注好友最新最炫酷的腐败动向！</p>
                     </div>
 			    </div>
