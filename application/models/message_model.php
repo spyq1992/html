@@ -205,7 +205,7 @@
 
 		$where="id=(select `text_id` from `msg_send` where `receiver_id`=".$uid." and `is_request`=0)";
 		$this->db->select('record_id,msg_title,msg_content,msg_senderid,createtime');
-		$this->db->where($where);
+		$this->db->where_in($where);
 		$this->db->from('msg_info');
 		$query = $this->db->get();
 
