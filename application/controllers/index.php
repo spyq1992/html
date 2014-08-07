@@ -147,23 +147,15 @@ class Index extends CI_Controller {
 
 	public function sina_callback()
 	{
-		echo "sina weibo callbakc page";exit;
+		 $this->load->view('sinacallback');
 	}
 	public function loginWithWeibo(){
-		$apiUrl="https://api.weibo.com/oauth2/authorize?client_id=416631666&response_type=code&redirect_uri=<?=site_url('index/index/') ?>";
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $apiUrl);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_ENCODING, 'UTF-8');
-		$code = curl_exec($ch);
-		var_dump($code);
-		$apiUrl1="https://api.weibo.com/oauth2/access_token?client_id=416631666&client_secret=9b29a9e09c5f95c2684abd1fed0b37ee&grant_type=authorization_code&code=".$code."&redirect_uri=<?=site_url('index/index/') ?>";
-		$ch1 = curl_init();
-		curl_setopt($ch1, CURLOPT_URL, $apiUrl);
-		curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch1, CURLOPT_ENCODING, 'UTF-8');
-		$token = curl_exec($ch1);
-		var_dump($token);
+		session_start();
+		$this->config->load('saetv2.ex.class.php');	
+		$this->config->load('sinaconfig.php');	
+		$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );		
+		$code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );			
+		redirect($code_url);
 	}
 }
 
