@@ -175,6 +175,7 @@ class Index extends CI_Controller {
 		$code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );			
 		redirect($code_url);
 	}
+
 }
 
 /* End of file welcome.php */
