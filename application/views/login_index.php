@@ -1,7 +1,10 @@
 <?	$this->load->view('inc/header_view') ;
 	$this->load->library('saetv2.ex.class.php');
+	echo "1";
 	$this->load->config('sinaconfig.php');
+	echo "2";
 	$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+	echo "3";
 	$code_url = $o->getAuthorizeURL( WB_CALLBACK_URL );
 ?>
 <body>
