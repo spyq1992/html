@@ -1,6 +1,6 @@
 
 <?php
-session_start();
+
 
 $this->config->load('saetv2.ex.class.php');
 
