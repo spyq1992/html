@@ -147,7 +147,25 @@ class Index extends CI_Controller {
 
 	public function sina_callback()
 	{
-		 $this->load->view('sinacallback');
+		 	$this->load->library('saetv2.ex.class.php');
+			$this->load->config('sinaconfig.php');
+			
+			$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+			
+			if (isset($_REQUEST['code'])) {
+				$keys = array();
+				$keys['code'] = $_REQUEST['code'];
+				$keys['redirect_uri'] = WB_CALLBACK_URL;
+				try {
+					$token = $o->getAccessToken( 'code', $keys ) ;
+				} catch (OAuthException $e) {
+				}
+			}
+			if ($token) {
+			$_SESSION['token'] = $token;
+			setcookie( 'weibojs_'.$o->client_id, http_build_query($token) );	
+			$this->load->view('sinacallback');
+			}
 	}
 	public function loginWithWeibo(){
 		
