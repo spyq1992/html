@@ -1,12 +1,13 @@
 
 <?php
 
-
+echo "1";
 $this->config->load('saetv2.ex.class.php');
-
+echo "2";
 $o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
 
 if (isset($_REQUEST['code'])) {
+	echo "3";
 	$keys = array();
 	$keys['code'] = $_REQUEST['code'];
 	$keys['redirect_uri'] = WB_CALLBACK_URL;
