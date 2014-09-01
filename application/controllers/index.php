@@ -150,7 +150,7 @@ class Index extends CI_Controller {
 		 $this->load->view('sinacallback');
 	}
 	public function loginWithWeibo(){
-		session_start();
+		
 		$this->config->load('saetv2.ex.class.php');	
 		$this->config->load('sinaconfig.php');	
 		$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );		
