@@ -52,7 +52,7 @@
           <legend class="">快速通过社交帐号登录</legend>
         </div>
         <div id="legend" class="">
-          <a href="http://http://23.89.232.77/sns/session/weibo"><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
+          <a href="http://23.89.232.77/sns/session/weibo"><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
           
         </div>
     </div>
