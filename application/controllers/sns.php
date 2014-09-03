@@ -5,7 +5,7 @@ class Sns extends CI_Controller {
 	public function __construct()
     {
       	parent::__construct();
-    	$this->session->userdata('is_login') AND redirect();
+    	$this->session->userdata('is_login') ;
     }
 
 	public function session($provider = '')
@@ -15,7 +15,7 @@ class Sns extends CI_Controller {
 		if ( ! $provider OR ! isset($allowed_providers[$provider]))
 		{
         	$this->session->set_flashdata('info', '暂不支持'.$provider.'方式登录.');
-            redirect();
+        //    redirect();
             return;
 		}
 		$this->load->library('oauth2');
@@ -24,7 +24,7 @@ class Sns extends CI_Controller {
         if ($args AND !isset($args['code']))
         {
           	$this->session->set_flashdata('info', '授权失败了,可能由于应用设置问题或者用户拒绝授权.<br />具体原因:<br />'.json_encode($args));
-            redirect();
+       //     redirect();
             return;
         }
         $code = $this->input->get('code', TRUE);
