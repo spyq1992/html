@@ -62,7 +62,7 @@ class Sns extends CI_Controller {
 			}
 		}
         //redirect();
-		echo redirect();
+		var_dump(redirect());
 	}
 }
 
