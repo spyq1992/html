@@ -172,7 +172,7 @@ class Index extends CI_Controller {
 		    $this->load->library('SaeTOAuthV2') ;
 			$this->load->config('sinaconfig.php') ;
 
-			
+			echo "1";
 
 			$code_url = getAuthorizeURL( WB_CALLBACK_URL );
 			redirect($code_url);
