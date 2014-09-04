@@ -131,7 +131,7 @@ class SaeTOAuthV2 {
 	 * @param string $language 授权页语言，缺省为中文简体版，en为英文版。英文版测试中，开发者任何意见可反馈至 @微博API
 	 * @return array
 	 */
-	public function getAuthorizeURL( $url, $response_type = 'code', $state = NULL, $display = NULL, $forcelogin = NULL, $language = NULL ) {
+	public function getauthorizeurl( $url, $response_type = 'code', $state = NULL, $display = NULL, $forcelogin = NULL, $language = NULL ) {
 		$params = array();
 		$params['client_id'] = $this->client_id;
 		$params['redirect_uri'] = $url;

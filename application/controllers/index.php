@@ -175,7 +175,7 @@ class Index extends CI_Controller {
 
 			echo "1";
 
-			$code_url = $this->SaeTOAuthV2->getAuthorizeURL( WB_CALLBACK_URL );
+			$code_url = $this->SaeTOAuthV2->getauthorizeurl( WB_CALLBACK_URL );
 			echo "2";
 			redirect($code_url);
 	}
