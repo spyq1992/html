@@ -11,8 +11,8 @@ class PartyWizard extends CI_Controller {
 	function wizard_step1($step = 1) {
 		switch ($step) {
 			case '1' :
-				if (isset($this -> session -> userdata('session_id'))) {
-					$this -> load -> view('wizardStep1');
+				if (true) {
+					$this -> load -> view('partyWizard/wizardStep1');
 				}
 				break;
 			case '2':
