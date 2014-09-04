@@ -1,9 +1,10 @@
 <?
 
-$config['oauth2']['w1eibo'] = array(
+$config['oauth2']['weibo'] = array(
 	'name' => '新浪微博',
 	'id' => '3016759760',
 	'secret' => 'b9ed361b3498557385462add26975b71',
+	'callback'  => 'http://partyus.wicp.net/index/sinacallback',
         'extra' => ''
 );
 ?>
