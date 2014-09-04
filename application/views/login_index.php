@@ -52,7 +52,7 @@
           <legend class="">快速通过社交帐号登录</legend>
         </div>
         <div id="legend" class="">
-          <a href="<?=base_url('index/loginWithWeibo')?>"  <img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
+          <a href="<?=base_url('index/loginWithWeibo')?>" > <img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
           
         </div>
     </div>
