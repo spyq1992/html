@@ -7,7 +7,7 @@ class Index extends CI_Controller {
 			$this->load->library('Authcode');
 			$this->load->model('User_model');
 			$this->load->library('saetoauthv');
-			$this->load->config('sinaconfig.php') ;
+			
 	}
 
 	public function index()
