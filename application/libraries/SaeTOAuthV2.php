@@ -97,16 +97,16 @@ class SaeTOAuthV2 {
 	/**
 	 * @ignore
 	 */
-	function accessTokenURL()  { return 'https://api.weibo.com/oauth2/access_token'; }
+	public function accessTokenURL()  { return 'https://api.weibo.com/oauth2/access_token'; }
 	/**
 	 * @ignore
 	 */
-	function authorizeURL()    { return 'https://api.weibo.com/oauth2/authorize'; }
+	public function authorizeURL()    { return 'https://api.weibo.com/oauth2/authorize'; }
 
 	/**
 	 * construct WeiboOAuth object
 	 */
-	function __construct($client_id='1993280203', $client_secret='b0c1fd122ece04e51ae1244b3318b50f', $access_token = NULL, $refresh_token = NULL) {
+	public function __construct($client_id='1993280203', $client_secret='b0c1fd122ece04e51ae1244b3318b50f', $access_token = NULL, $refresh_token = NULL) {
 		$this->client_id = $client_id;
 		$this->client_secret = $client_secret;
 		$this->access_token = $access_token;
@@ -131,7 +131,7 @@ class SaeTOAuthV2 {
 	 * @param string $language 授权页语言，缺省为中文简体版，en为英文版。英文版测试中，开发者任何意见可反馈至 @微博API
 	 * @return array
 	 */
-	function getAuthorizeURL( $url, $response_type = 'code', $state = NULL, $display = NULL, $forcelogin = NULL, $language = NULL ) {
+	public function getAuthorizeURL( $url, $response_type = 'code', $state = NULL, $display = NULL, $forcelogin = NULL, $language = NULL ) {
 		$params = array();
 		$params['client_id'] = $this->client_id;
 		$params['redirect_uri'] = $url;
@@ -155,7 +155,7 @@ class SaeTOAuthV2 {
 	 *  - 当$type为token时： array('refresh_token'=>...)
 	 * @return array
 	 */
-	function getAccessToken( $type = 'code', $keys ) {
+	public function getAccessToken( $type = 'code', $keys ) {
 		$params = array();
 		$params['client_id'] = $this->client_id;
 		$params['client_secret'] = $this->client_secret;
@@ -192,7 +192,7 @@ class SaeTOAuthV2 {
 	 *
 	 * @return array
 	 */
-	function parseSignedRequest($signed_request) {
+	public function parseSignedRequest($signed_request) {
 		list($encoded_sig, $payload) = explode('.', $signed_request, 2); 
 		$sig = self::base64decode($encoded_sig) ;
 		$data = json_decode(self::base64decode($payload), true);
@@ -204,7 +204,7 @@ class SaeTOAuthV2 {
 	/**
 	 * @ignore
 	 */
-	function base64decode($str) {
+	public function base64decode($str) {
 		return base64_decode(strtr($str.str_repeat('=', (4 - strlen($str) % 4)), '-_', '+/'));
 	}
 
@@ -213,7 +213,7 @@ class SaeTOAuthV2 {
 	 *
 	 * @return array 成功返回array('access_token'=>'value', 'refresh_token'=>'value'); 失败返回false
 	 */
-	function getTokenFromJSSDK() {
+	public function getTokenFromJSSDK() {
 		$key = "weibojs_" . $this->client_id;
 		if ( isset($_COOKIE[$key]) && $cookie = $_COOKIE[$key] ) {
 			parse_str($cookie, $token);
@@ -236,7 +236,7 @@ class SaeTOAuthV2 {
 	 * @param array $arr 存有access_token和secret_token的数组
 	 * @return array 成功返回array('access_token'=>'value', 'refresh_token'=>'value'); 失败返回false
 	 */
-	function getTokenFromArray( $arr ) {
+	public function getTokenFromArray( $arr ) {
 		if (isset($arr['access_token']) && $arr['access_token']) {
 			$token = array();
 			$this->access_token = $token['access_token'] = $arr['access_token'];
@@ -255,7 +255,7 @@ class SaeTOAuthV2 {
 	 *
 	 * @return mixed
 	 */
-	function get($url, $parameters = array()) {
+	public function get($url, $parameters = array()) {
 		$response = $this->oAuthRequest($url, 'GET', $parameters);
 		if ($this->format === 'json' && $this->decode_json) {
 			return json_decode($response, true);
@@ -268,7 +268,7 @@ class SaeTOAuthV2 {
 	 *
 	 * @return mixed
 	 */
-	function post($url, $parameters = array(), $multi = false) {
+	public function post($url, $parameters = array(), $multi = false) {
 		$response = $this->oAuthRequest($url, 'POST', $parameters, $multi );
 		if ($this->format === 'json' && $this->decode_json) {
 			return json_decode($response, true);
@@ -281,7 +281,7 @@ class SaeTOAuthV2 {
 	 *
 	 * @return mixed
 	 */
-	function delete($url, $parameters = array()) {
+	public function delete($url, $parameters = array()) {
 		$response = $this->oAuthRequest($url, 'DELETE', $parameters);
 		if ($this->format === 'json' && $this->decode_json) {
 			return json_decode($response, true);
@@ -295,7 +295,7 @@ class SaeTOAuthV2 {
 	 * @return string
 	 * @ignore
 	 */
-	function oAuthRequest($url, $method, $parameters, $multi = false) {
+	public function oAuthRequest($url, $method, $parameters, $multi = false) {
 
 		if (strrpos($url, 'http://') !== 0 && strrpos($url, 'https://') !== 0) {
 			$url = "{$this->host}{$url}.{$this->format}";
@@ -323,7 +323,7 @@ class SaeTOAuthV2 {
 	 * @return string API results
 	 * @ignore
 	 */
-	function http($url, $method, $postfields = NULL, $headers = array()) {
+	public function http($url, $method, $postfields = NULL, $headers = array()) {
 		$this->http_info = array();
 		$ci = curl_init();
 		/* Curl settings */

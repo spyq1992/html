@@ -7,6 +7,7 @@ class Index extends CI_Controller {
 			$this->load->library('Authcode');
 			$this->load->model('User_model');
 			$this->load->library('SaeTOAuthV2');
+			$this->load->config('sinaconfig.php') ;
 	}
 
 
@@ -169,8 +170,8 @@ class Index extends CI_Controller {
 	}
 	public function loginWithWeibo(){
 		
-		    $this->load->library('SaeTOAuthV2.php') ;
-			$this->load->config('sinaconfig.php') ;
+		    
+			
 
 			echo "1";
 
