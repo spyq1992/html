@@ -169,12 +169,12 @@ class Index extends CI_Controller {
 	}
 	public function loginWithWeibo(){
 		
-		    $this->load->library('SaeTOAuthV2.php') ;
+		    $this->load->library('SaeTOAuthV2') ;
 			$this->load->config('sinaconfig.php') ;
 
 			
 
-			$code_url = $this->saetoauth2->getAuthorizeURL( WB_CALLBACK_URL );
+			$code_url = $this->SaeTOAuthV2->getAuthorizeURL( WB_CALLBACK_URL );
 			redirect($code_url);
 	}
 
