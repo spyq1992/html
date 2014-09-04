@@ -170,7 +170,7 @@ class Index extends CI_Controller {
 	public function loginWithWeibo(){
 		
 		    $this->load->library('SaeTOAuthV2.php') ;
-			$this->load->library('sinaconfig.php') ;
+			$this->load->config('sinaconfig.php') ;
 
 			
 
