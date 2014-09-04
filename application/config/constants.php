@@ -42,6 +42,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
 //新浪微博配置
-define( "WB_AKEY" , '1993280203' );
-define( "WB_SKEY" , 'b0c1fd122ece04e51ae1244b3318b50f' );
-define( "WB_CALLBACK_URL" , 'http://216.189.52.101//index.php' );
+define( "WB_AKEY" , '3016759760' );
+define( "WB_SKEY" , 'b9ed361b3498557385462add26975b71' );
+define( "WB_CALLBACK_URL" , 'http://partyus.zhang-wei.me/index/sina_callback' );
+
