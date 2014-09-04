@@ -11,6 +11,7 @@ class PartyWizard extends CI_Controller {
 	function wizard_step1($step = 1) {
 		switch ($step) {
 			case '1' :
+				echo "1";
 				if (true) {
 					$this -> load -> view('partyWizard/wizardStep1');
 				}
