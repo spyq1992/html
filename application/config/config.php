@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://partyus.zhang-wei.me';
+$config['base_url']	= 'http://localhost/html';
 
 /*
 |--------------------------------------------------------------------------
