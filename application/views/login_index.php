@@ -1,5 +1,5 @@
 <?	$this->load->view('inc/header_view') ;
-    $this->load->library('saetoauth2') ;
+    $this->load->library('saetoauthv2') ;
 	$this->load->config('sinaconfig') ;
 
 $o = $this->saetoauth2->SaeTOAuthV2( WB_AKEY , WB_SKEY );
