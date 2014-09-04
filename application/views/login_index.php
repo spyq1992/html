@@ -1,10 +1,5 @@
 <?	$this->load->view('inc/header_view') ;
-    $this->load->library('saetoauthv2') ;
-	$this->load->config('sinaconfig') ;
 
-$o = $this->saetoauth2->SaeTOAuthV2( WB_AKEY , WB_SKEY );
-
-$code_url = $this->saetoauth2->getAuthorizeURL( WB_CALLBACK_URL );
 ?>
 <body>
 <? $this->load->view('inc/nav_view') ?>
@@ -57,7 +52,7 @@ $code_url = $this->saetoauth2->getAuthorizeURL( WB_CALLBACK_URL );
           <legend class="">快速通过社交帐号登录</legend>
         </div>
         <div id="legend" class="">
-          <a href=<?=$code_url?><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
+          <a href=<?=base_url('index/loginWithWeibo')?><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
           
         </div>
     </div>
