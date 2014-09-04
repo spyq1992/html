@@ -6,7 +6,7 @@ class Index extends CI_Controller {
 			parent::__construct();
 			$this->load->library('Authcode');
 			$this->load->model('User_model');
-			$this->load->library('saetoauthv2');
+			$this->load->library('saetoauthv');
 			$this->load->config('sinaconfig.php') ;
 	}
 
@@ -174,7 +174,7 @@ class Index extends CI_Controller {
 
 			echo "1";
 
-			$code_url = $this->saetoauthv2->getauthorizeurl( WB_CALLBACK_URL );
+			$code_url = $this->saetoauthv->getauthorizeurl( WB_CALLBACK_URL );
 			echo "2";
 			redirect($code_url);
 	}

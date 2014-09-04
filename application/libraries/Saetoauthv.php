@@ -1,8 +1,8 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class SaeTOAuthV2 {
-	/**
-	 * @ignore
+class Saetoauthv {
+	/**to
+	 * @ignorea
 	 */
 	public $client_id;
 	/**
