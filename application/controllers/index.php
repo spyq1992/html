@@ -6,10 +6,9 @@ class Index extends CI_Controller {
 			parent::__construct();
 			$this->load->library('Authcode');
 			$this->load->model('User_model');
-			$this->load->library('SaeTOAuthV2');
+			$this->load->library('saetoauthv2');
 			$this->load->config('sinaconfig.php') ;
 	}
-
 
 	public function index()
 	{
