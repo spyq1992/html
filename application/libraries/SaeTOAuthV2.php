@@ -1,27 +1,5 @@
-<?php
-/**
- * PHP SDK for weibo.com (using OAuth2)
- * 
- * @author Elmer Zhang <freeboy6716@gmail.com>
- */
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-/**
- * @ignore
- */
-class OAuthException extends Exception {
-	// pass
-}
-
-
-/**
- * 新浪微博 OAuth 认证类(OAuth2)
- *
- * 授权机制说明请大家参考微博开放平台文档：{@link http://open.weibo.com/wiki/Oauth2}
- *
- * @package sae
- * @author Elmer Zhang
- * @version 1.0
- */
 class SaeTOAuthV2 {
 	/**
 	 * @ignore
@@ -3282,3 +3260,4 @@ class SaeTClientV2
 	}
 
 }
+/* End of file Someclass.php */
