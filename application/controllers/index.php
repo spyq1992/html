@@ -175,6 +175,7 @@ class Index extends CI_Controller {
 			echo "1";
 
 			$code_url = getAuthorizeURL( WB_CALLBACK_URL );
+			echo "2";
 			redirect($code_url);
 	}
 
