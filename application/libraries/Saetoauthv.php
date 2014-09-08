@@ -83,7 +83,7 @@ class Saetoauthv {
 	 *
 	 * @ignore
 	 */
-	public $debug = TRUE;
+	public $debug = FALSE;
 
 	/**
 	 * boundary of multipart
