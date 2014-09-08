@@ -145,17 +145,16 @@ class Index extends CI_Controller {
 			redirect('index/');
 	}
 
-	public function sina_callback($code)
+	public function sina_callback()
 	{
 		 	
-			
-					
+							
 			if (isset($_REQUEST['code'])) {
 				$keys = array();
 				$keys['code'] = $_REQUEST['code'];
 				$keys['redirect_uri'] = WB_CALLBACK_URL;
 				try {
-					$token = $this->saetoauthv->getAccessToken( 'code', $keys ) ;
+					$token = $this->saetoauthv->getaccesstoken( 'code', $keys ) ;
 				} catch (OAuthException $e) {
 				}
 			}
@@ -168,12 +167,7 @@ class Index extends CI_Controller {
 	public function loginWithWeibo(){
 		
 		    
-			
-
-			echo "1";
-
 			$code_url = $this->saetoauthv->getauthorizeurl( WB_CALLBACK_URL );
-			echo "2";
 			redirect($code_url);
 	}
 
