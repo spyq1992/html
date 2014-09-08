@@ -182,7 +182,8 @@ class Saetoauthv {
 		if ( is_array($token) && !isset($token['error']) ) {
 			$this->access_token = $token['access_token'];
 			$this->refresh_token = $token['refresh_token'];
-			
+			var_dump($response);
+			var_dump($params);
 		} else {
 			
 			throw new OAuthException("get access token failed." . $token['error']);
