@@ -162,7 +162,7 @@ class Index extends CI_Controller {
 			if ($token) {
 			$_SESSION['token'] = $token;
 			setcookie( 'weibojs_'.$this->saetoauthv->client_id, http_build_query($token) );	
-			$this->load->view('sinacallback');
+			$this->load->view('welcome');
 			}
 	}
 	public function loginWithWeibo(){
