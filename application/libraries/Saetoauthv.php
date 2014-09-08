@@ -325,7 +325,7 @@ class Saetoauthv {
 			var_dump($url);
 			var_dump($method);
 			var_dump($body);
-			var_dump($header);
+			var_dump($headers);
 			return $this->http($url, $method, $body, $headers);
 	}
 	}
