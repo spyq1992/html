@@ -7,7 +7,7 @@ class Index extends CI_Controller {
 			$this->load->library('Authcode');
 			$this->load->model('User_model');
 			$this->load->library('saetoauthv');
-			$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+			
 	}
 
 	public function index()
