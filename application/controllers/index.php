@@ -149,8 +149,7 @@ class Index extends CI_Controller {
 	{
 		 	
 			
-			$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
-			
+					
 			if (isset($_REQUEST['code'])) {
 				$keys = array();
 				$keys['code'] = $_REQUEST['code'];
