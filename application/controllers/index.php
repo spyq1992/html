@@ -145,7 +145,7 @@ class Index extends CI_Controller {
 			redirect('index/');
 	}
 
-	public function sina_callback()
+	public function sina_callback($code)
 	{
 		 	
 			
