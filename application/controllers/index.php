@@ -154,7 +154,7 @@ class Index extends CI_Controller {
 				$keys['code'] = $_REQUEST['code'];
 				$keys['redirect_uri'] = WB_CALLBACK_URL;
 				try {
-					$token = $this->saetoauthv->getaccesstoken( 'code', $keys ) ;
+					$token = $this->saetoauthv->getAccessToken('code', $keys) ;
 				} catch (OAuthException $e) {
 				}
 			}

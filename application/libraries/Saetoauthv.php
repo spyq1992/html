@@ -167,12 +167,14 @@ class Saetoauthv {
 			$params['grant_type'] = 'authorization_code';
 			$params['code'] = $keys['code'];
 			$params['redirect_uri'] = $keys['redirect_uri'];
+			echo "1";
 		} elseif ( $type === 'password' ) {
 			$params['grant_type'] = 'password';
 			$params['username'] = $keys['username'];
 			$params['password'] = $keys['password'];
 		} else {
 			throw new OAuthException("wrong auth type");
+			echo "2";
 		}
 
 		$response = $this->oAuthRequest($this->accessTokenURL(), 'POST', $params);
@@ -180,7 +182,9 @@ class Saetoauthv {
 		if ( is_array($token) && !isset($token['error']) ) {
 			$this->access_token = $token['access_token'];
 			$this->refresh_token = $token['refresh_token'];
+			echo "3";
 		} else {
+			echo "4";
 			throw new OAuthException("get access token failed." . $token['error']);
 		}
 		return $token;
