@@ -178,7 +178,7 @@ class Saetoauthv {
 		}
 
 		$response = $this->oAuthRequest($this->accessTokenURL(), 'POST', $params);
-		
+		echo "9";
 		$token = json_decode($response, true);
 		if ( is_array($token) && !isset($token['error']) ) {
 			$this->access_token = $token['access_token'];
