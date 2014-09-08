@@ -182,7 +182,7 @@ class Saetoauthv {
 		$token = json_decode($response, true);
 		if ( is_array($token) && !isset($token['error']) ) {
 			$this->access_token = $token['access_token'];
-			$this->refresh_token = $token['refresh_token'];
+			//$this->refresh_token = $token['refresh_token'];
 			var_dump($response);
 			var_dump($params);
 		} else {
