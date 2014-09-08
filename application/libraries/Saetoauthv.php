@@ -316,13 +316,16 @@ class Saetoauthv {
 			$headers = array();
 			if (!$multi && (is_array($parameters) || is_object($parameters)) ) {
 				$body = http_build_query($parameters);
-				echo "1";
+				
 			} else {
 				$body = self::build_http_query_multi($parameters);
 				$headers[] = "Content-Type: multipart/form-data; boundary=" . self::$boundary;
-				echo "2";
+				
 			}
-			echo "3";
+			var_dump($url);
+			var_dump($method);
+			var_dump($body);
+			var_dump($header);
 			return $this->http($url, $method, $body, $headers);
 	}
 	}
