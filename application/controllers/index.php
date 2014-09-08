@@ -155,14 +155,15 @@ class Index extends CI_Controller {
 				$keys['redirect_uri'] = WB_CALLBACK_URL;
 				try {
 					$token = $this->saetoauthv->getAccessToken('code', $keys) ;
-				} catch (OAuthException $e) {
-				}
-			}
-			if ($token) {
+					if ($token) {
 			$_SESSION['token'] = $token;
 			setcookie( 'weibojs_'.$this->saetoauthv->client_id, http_build_query($token) );	
 			redirect(base_url);
 			}
+				} catch (OAuthException $e) {
+				}
+			}
+			
 	}
 	public function loginWithWeibo(){
 		
