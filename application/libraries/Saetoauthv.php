@@ -156,7 +156,7 @@ class Saetoauthv {
 	 *  - 当$type为token时： array('refresh_token'=>...)
 	 * @return array
 	 */
-	public function getAccessToken( $type = 'code', $keys =null) {
+	public function getAccessToken( $type = 'token', $keys =null) {
 		$params = array();
 		$params['client_id'] = $this->client_id;
 		$params['client_secret'] = $this->client_secret;
