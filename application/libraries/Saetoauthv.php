@@ -178,13 +178,10 @@ class Saetoauthv {
 		}
 
 		$response = $this->oAuthRequest($this->accessTokenURL(), 'POST', $params);
-		echo "9";
 		$token = json_decode($response, true);
 		if ( is_array($token) && !isset($token['error']) ) {
 			$this->access_token = $token['access_token'];
 			//$this->refresh_token = $token['refresh_token'];
-			var_dump($response);
-			var_dump($params);
 		} else {
 			
 			throw new OAuthException("get access token failed." . $token['error']);
@@ -322,10 +319,6 @@ class Saetoauthv {
 				$headers[] = "Content-Type: multipart/form-data; boundary=" . self::$boundary;
 				
 			}
-			var_dump($url);
-			var_dump($method);
-			var_dump($body);
-			var_dump($headers);
 			return $this->http($url, $method, $body, $headers);
 	}
 	}
