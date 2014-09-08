@@ -158,7 +158,7 @@ class Index extends CI_Controller {
 					
 					$_SESSION['token'] = $token;
 					setcookie( 'weibojs_'.$this->saetoauthv->client_id, http_build_query($token) );	
-					redirect(base_url);
+					$this->load->view('sinacallback');
 			
 				} catch (OAuthException $e) {
 				}
