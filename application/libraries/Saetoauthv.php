@@ -178,6 +178,7 @@ class Saetoauthv {
 		}
 
 		$response = $this->oAuthRequest($this->accessTokenURL(), 'POST', $params);
+		
 		$token = json_decode($response, true);
 		if ( is_array($token) && !isset($token['error']) ) {
 			$this->access_token = $token['access_token'];
@@ -315,10 +316,13 @@ class Saetoauthv {
 			$headers = array();
 			if (!$multi && (is_array($parameters) || is_object($parameters)) ) {
 				$body = http_build_query($parameters);
+				echo "1";
 			} else {
 				$body = self::build_http_query_multi($parameters);
 				$headers[] = "Content-Type: multipart/form-data; boundary=" . self::$boundary;
+				echo "2";
 			}
+			echo "3";
 			return $this->http($url, $method, $body, $headers);
 	}
 	}
