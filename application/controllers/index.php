@@ -147,8 +147,7 @@ class Index extends CI_Controller {
 
 	public function sina_callback()
 	{
-		 	$this->load->library('saetv2.ex.class.php');
-			$this->load->config('sinaconfig.php');
+		 	
 			
 			$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
 			

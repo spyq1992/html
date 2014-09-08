@@ -106,11 +106,12 @@ class Saetoauthv {
 	/**
 	 * construct WeiboOAuth object
 	 */
-	public function __construct( $client_id=WB_AKEY ,$client_secret= WB_SKEY, $access_token = NULL, $refresh_token = NULL) {
+	public function __construct( $client_id='3016759760' ,$client_secret= 'b9ed361b3498557385462add26975b71', $access_token = NULL, $refresh_token = NULL) {
 		$this->client_id = $client_id;
 		$this->client_secret = $client_secret;
 		$this->access_token = $access_token;
 		$this->refresh_token = $refresh_token;
+
 	}
 
 	/**
