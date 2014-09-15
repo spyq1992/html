@@ -8,7 +8,7 @@ class Index extends CI_Controller {
 			$this->load->model('User_model');
 			$this->load->model('Weibo_model');
 			$this->load->library('saetoauthv');
-			$thie->load->library('saetclientv');
+			$this->load->library('saetclientv');
 			
 	}
 
