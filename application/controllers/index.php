@@ -163,7 +163,7 @@ class Index extends CI_Controller {
 				$keys['redirect_uri'] = WB_CALLBACK_URL;
 				$keys['refresh_token']= null;
 				try {
-					$token = $o->getAccessToken( 'code', $keys ) ; ;
+					$token = $this->saetoauthv->getAccessToken( 'code', $keys ) ; ;
 					$_SESSION['token'] = $token;
 					setcookie( 'weibojs_'.$this->saetoauthv->client_id, http_build_query($token) );	
 					$this->saetclientv->set_token($token);
