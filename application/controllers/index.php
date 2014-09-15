@@ -9,6 +9,7 @@ class Index extends CI_Controller {
 			$this->load->model('Weibo_model');
 			$this->load->library('saetoauthv');
 			$this->load->library('saetclientv');
+			$o = new saetclientv( WB_AKEY , WB_SKEY );
 			
 	}
 
@@ -150,7 +151,7 @@ class Index extends CI_Controller {
 	public function sina_callback()
 	{
 		 	
-		$o = new saetoauthv( WB_AKEY , WB_SKEY );
+		
 
 
 		
@@ -165,7 +166,7 @@ class Index extends CI_Controller {
 					$token = $o->getAccessToken( 'code', $keys ) ; ;
 					$_SESSION['token'] = $token;
 					setcookie( 'weibojs_'.$this->saetoauthv->client_id, http_build_query($token) );	
-					
+					$this->saetclientv->set_token($token);
 				} catch (OAuthException $e) {
 				}	
 				

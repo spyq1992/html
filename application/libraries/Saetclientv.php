@@ -1,4 +1,4 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 
 /**
  * 新浪微博操作类V2
  *
@@ -20,11 +20,14 @@ class Saetclientv
 	 * @param mixed $refresh_token OAuth认证返回的token secret
 	 * @return void
 	 */
-	function __construct( $akey, $skey, $access_token, $refresh_token = NULL)
+	function __construct( $akey='3016759760', $skey= 'b9ed361b3498557385462add26975b71', $access_token= NULL, $refresh_token = NULL)
 	{
 		$this->oauth = new SaeTOAuthV2( $akey, $skey, $access_token, $refresh_token );
 	}
-
+	//给这个里面这个oauth赋值
+	function set_token($token){
+		$this->oauth->$access_token=$token;
+	}
 	/**
 	 * 开启调试信息
 	 *
