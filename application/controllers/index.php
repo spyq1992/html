@@ -168,7 +168,7 @@ class Index extends CI_Controller {
 				} catch (OAuthException $e) {
 				}	
 				
-				$uid= $this->saetoauthv->get_uid();
+				$uid= $this->saetclientv2->get_uid();
 				var_dump($uid);
 				if($this->Weibo_model->exist_uid($uid['uid'])){
 					$this->load->view('sinacallback');

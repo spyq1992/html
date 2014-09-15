@@ -479,7 +479,7 @@ class Saetoauthv {
  * @author Easy Chen, Elmer Zhang,Lazypeople
  * @version 1.0
  */
-class SaeTClientV2
+class Saetclientv2
 {
 	/**
 	 * 构造函数
