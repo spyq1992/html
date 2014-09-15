@@ -6,6 +6,7 @@ class Index extends CI_Controller {
 			parent::__construct();
 			$this->load->library('Authcode');
 			$this->load->model('User_model');
+			$this->load->model('Weibo_model');
 			$this->load->library('saetoauthv');
 			
 	}
@@ -159,12 +160,21 @@ class Index extends CI_Controller {
 				$keys['code'] = $_REQUEST['code'];
 				$keys['redirect_uri'] = WB_CALLBACK_URL;
 				$keys['refresh_token']= null;
+				
+				$uid= array();
+				$this->saetoauthv->get('account/get_uid',$uid);
+				$uid= json_decode($uid);
+				if($this->Weibo_model->exist_uid($uid['uid'])){
 				try {
 					$token = $o->getAccessToken( 'code', $keys ) ; ;
 					$_SESSION['token'] = $token;
 					setcookie( 'weibojs_'.$this->saetoauthv->client_id, http_build_query($token) );	
 					$this->load->view('sinacallback');
 				} catch (OAuthException $e) {
+				}	
+				}
+				else{
+					$this->load->view('sinacallback');
 				}
 			}
 			
