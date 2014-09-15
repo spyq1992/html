@@ -25,8 +25,8 @@ class Saetclientv
 		$this->oauth = new SaeTOAuthV2( $akey, $skey, $access_token, $refresh_token );
 	}
 	//给这个里面这个oauth赋值
-	function set_token($token){
-		$this->oauth->$access_token=$token;
+	public function set_token($token){
+		$this->oauth->access_token=$token;
 	}
 	/**
 	 * 开启调试信息
