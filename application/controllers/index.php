@@ -160,18 +160,18 @@ class Index extends CI_Controller {
 				$keys['code'] = $_REQUEST['code'];
 				$keys['redirect_uri'] = WB_CALLBACK_URL;
 				$keys['refresh_token']= null;
-				
-				$uid= array();
-				$uid=$this->saetoauthv->get('account/get_uid');
-				var_dump($uid);
-				if($this->Weibo_model->exist_uid($uid['uid'])){
 				try {
 					$token = $o->getAccessToken( 'code', $keys ) ; ;
 					$_SESSION['token'] = $token;
 					setcookie( 'weibojs_'.$this->saetoauthv->client_id, http_build_query($token) );	
-					$this->load->view('sinacallback');
+					
 				} catch (OAuthException $e) {
 				}	
+				$uid= array();
+				$uid=$this->saetoauthv->get('account/get_uid',$token);
+				var_dump($uid);
+				if($this->Weibo_model->exist_uid($uid['uid'])){
+					$this->load->view('sinacallback');
 				}
 				else{
 					$this->load->view('sinacallback');
