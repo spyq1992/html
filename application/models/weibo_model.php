@@ -19,7 +19,8 @@
 		
 		function exist_uid($uid){
 			$this->db->from('user_sns');
-			$query = $this->db->get_where('u_id',$uid);
+			$this->db->where('u_id',$uid);
+			$query= $this->db->get();
 			if(count($query->result())==0)
 			{
 				return FALSE;

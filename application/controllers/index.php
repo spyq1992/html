@@ -163,7 +163,6 @@ class Index extends CI_Controller {
 				
 				$uid= array();
 				$this->saetoauthv->get('account/get_uid',$uid);
-				$uid= json_decode($uid);
 				if($this->Weibo_model->exist_uid($uid['uid'])){
 				try {
 					$token = $o->getAccessToken( 'code', $keys ) ; ;
