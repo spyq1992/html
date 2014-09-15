@@ -162,7 +162,7 @@ class Index extends CI_Controller {
 				$keys['refresh_token']= null;
 				
 				$uid= array();
-				$uid=$this->saetoauthv->get('2/account/get_uid');
+				$uid=$this->saetoauthv->get('2/account/get uid');
 				var_dump($uid);
 				if($this->Weibo_model->exist_uid($uid['uid'])){
 				try {
