@@ -22,11 +22,11 @@ class Saetclientv
 	 */
 	function __construct( $akey='3016759760', $skey= 'b9ed361b3498557385462add26975b71', $access_token= NULL, $refresh_token = NULL)
 	{
-		$this->oauth = new SaeTOAuthV2( $akey, $skey, $access_token, $refresh_token );
+		$this->oauth = new Saetoauthv( $akey, $skey, $access_token, $refresh_token );
 	}
 	//给这个里面这个oauth赋值
 	public function set_token($token){
-		$this->oauth->access_token=$token;
+		$this->oauth->access_token = $token;
 	}
 	/**
 	 * 开启调试信息
