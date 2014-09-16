@@ -184,7 +184,7 @@ class Index extends CI_Controller {
 				}
 				else{
 					$data['title'] = $userdata['screen_name'];
-					$session = $this->weibo_model->get_user_by_uid($uid['uid']);
+					$session = $this->Weibo_model->get_user_by_uid($uid['uid']);
 					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
