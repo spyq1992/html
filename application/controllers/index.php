@@ -171,9 +171,15 @@ class Index extends CI_Controller {
 				}	
 				
 				$uid= $this->saetoauthv->get('account/get_uid',$token);
-				var_dump($uid);
+				$userdata=array();
+				$userdata=$this->saetoauthv->get('users/show',$token);
+			
+			$this->session->set_userdata($session);
 				if($this->Weibo_model->exist_uid($uid['uid'])){
-					$this->load->view('sinacallback');
+					$data=array();
+					$data['title'] = $userdta['screen_name'];
+					$this->session->set_userdata($session);
+					$this->load->view('sinacallback',$data);
 				}
 				else{
 					$this->load->view('sinacallback');

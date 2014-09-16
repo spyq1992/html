@@ -6,7 +6,7 @@
 		$email=$this->session->userdata('email');
 		$id=$this->session->userdata('id');
 		$avatar=$this->session->userdata('avatar');
-		$avatar_id=($avatar=="default.jpg")?('default'):($id);
+		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
 	}
 	else{
 		$is_login=0;
@@ -24,6 +24,7 @@
 								<li class="active">
 									<a href="<?=site_url('') ?>">欢迎您</a>
 								</li>
+								
 								<li>
 									<a href="<?=site_url('index/login/') ?>">登录</a>
 								</li>
