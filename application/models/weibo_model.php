@@ -91,7 +91,17 @@
 			}
 			return $userinfo;
 		}
-
+		
+		function get_user_by_uid($uid){
+			$query = $this->db->get_where('user_ginfo', array('u_id' => $uid));
+			foreach ($query->result() as $row)
+			{
+				$userinfo['email']= $row->email;
+				$userinfo['real_name']= $row->real_name;
+				$userinfo['id']= $row->id;
+			}
+			return $userinfo;
+		}
 		function get_user_einfo($id)
 		{
 			$query = $this->db->get_where('user_einfo', array('id' => $id));
