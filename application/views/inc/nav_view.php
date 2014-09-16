@@ -1,13 +1,19 @@
 <?php 
-	if($this->session->userdata('id'))
-	{
+	if($this->session->userdata('uid')){
 		$is_login=1;
-		$name=$this->session->userdata('real_name');
-		$email=$this->session->userdata('email');
-		$id=$this->session->userdata('id');
-		$avatar=$this->session->userdata('avatar');
-		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
+		$session=$this->session->all_userdata();
+		$name=$session['userdata']['screen_name'];
+		$id=$session['uid'];
 	}
+//	if($this->session->userdata('id'))
+//	{
+//		$is_login=1;
+//		$name=$this->session->userdata('real_name');
+//		$email=$this->session->userdata('email');
+//		$id=$this->session->userdata('id');
+//		$avatar=$this->session->userdata('avatar');
+//		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
+//  }
 	else{
 		$is_login=0;
 	}
@@ -35,7 +41,9 @@
 								<?php }else{?>
 									<ul class="nav pull-left">
 										<li class="dropdown active">
-											 <a data-toggle="dropdown" class="dropdown-toggle" href="#"><img src="<? echo site_url('data/avatar/personal/')."/".$avatar_id.".jpg" ?>" width="25px" height="25px"><?php echo $name; ?><strong class="caret"></strong></a>
+											 <a data-toggle="dropdown" class="dropdown-toggle" href="#"><img src="
+											 	<? echo $session['userdata']['profile_image_url'] ?>
+											 	" width="25px" height="25px"><?php echo $name; ?><strong class="caret"></strong></a>
 											<ul class="dropdown-menu">
 												<li>
 													<a href="#">我的聚会</a>

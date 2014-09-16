@@ -178,13 +178,24 @@ class Index extends CI_Controller {
 				if($this->Weibo_model->exist_uid($uid['uid'])){
 					$data=array();
 					$data['title'] = $userdta['screen_name'];
+					$session=array(
+						'uid'=>$uid['uid'],
+						'type'=>'weibo',
+						'userdata'=>$userdata,
+						'token'=>$token
+					);
 					$session = $this->weibo_model->get_user_by_uid($uid['uid']);
 					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
 				else{
 					$data['title'] = $userdata['screen_name'];
-					$session = $this->Weibo_model->get_user_by_uid($uid['uid']);
+					$session=array(
+						'uid'=>$uid['uid'],
+						'type'=>'weibo',
+						'userdata'=>$userdata,
+						'token'=>$token
+					);
 					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
