@@ -180,11 +180,12 @@ class Index extends CI_Controller {
 					$data['title'] = $userdta['screen_name'];
 					$session = $this->weibo_model->get_user_by_uid($uid['uid']);
 					$this->session->set_userdata($session);
-					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
 				else{
 					$data['title'] = $userdata['screen_name'];
+					$session = $this->weibo_model->get_user_by_uid($uid['uid']);
+					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
 			}
