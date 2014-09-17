@@ -1,9 +1,9 @@
 $(function() {
-	$("#email").blur(function(){
+	$("#user_email").blur(function(){
 		email_check();
 	});
 	
-	$("#pwd").blur(function(){
+	$("#user_pwd").blur(function(){
 		pass_check();
 	});
 	
@@ -14,7 +14,7 @@ $(function() {
 			//成功跳转至首页，失败显示错误原因
 			$.ajax({
 	              type:"post",
-	              data: "email_in=" + $("#email").val()+"&password_in="+$("#pwd").val(),
+	              data: "email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
 	              url:"/index/do_login",
 	               success: function(result)
 	               {
@@ -51,7 +51,7 @@ $(function() {
 
 
 function pass_check() {
-	val = $("#pwd").val();
+	val = $("#user_pwd").val();
 	if(val=='') {
 		$("#pwd_prompt").css({color:"red"});
 		$("#pwd_prompt").text('密码不能为空');
@@ -64,7 +64,7 @@ function pass_check() {
 
 
 function email_check() {
-	val = $("#email").val();
+	val = $("#user_email").val();
 	var myreg = /\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/;		
 		if(val=='') {
 			$("#email_prompt").css({color:"red"});

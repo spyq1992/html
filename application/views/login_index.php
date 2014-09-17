@@ -17,7 +17,7 @@
           <!-- Text input-->
           <label class="control-label" for="input01">邮箱</label>
           <div class="controls">
-            <input type="text" placeholder="您的邮箱地址" class="input-xlarge" id="email" name="email">
+            <input type="text" placeholder="您的邮箱地址" class="input-xlarge" id="user_email" name="user_email">
             <p class="help-block"></p>
             <span class="prompt" id="email_prompt"></span>
           </div>
@@ -28,7 +28,7 @@
           <!-- Text input-->
           <label class="control-label" for="input01">密码</label>
           <div class="controls">
-            <input type="password" placeholder="您的密码" class="input-xlarge" maxlength="20" id="pwd" name="pwd">
+            <input type="password" placeholder="您的密码" class="input-xlarge" maxlength="20" id="user_pwd" name="user_pwd">
             <p class="help-block"></p>
             <span class="prompt" id="pwd_prompt"></span>
           </div>
