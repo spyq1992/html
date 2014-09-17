@@ -8,6 +8,14 @@
   <?=form_open('index/do_login','class="form-horizontal"') ?>
   <fieldset>
       <div id="legend" class="">
+      	<?$radio = array(
+		    'name'        => 'olduser',
+		    'id'          => 'olduser',
+		    'value'       => 'accept',
+		    'checked'     => TRUE,
+		    
+		    );
+      	form_radio($radio);?>
         <legend class="">绑定-已有账号</legend>
       </div>
     <div class="control-group">
@@ -33,7 +41,7 @@
           </div>
         </div>
 	<div class="sub-btn">
-      <button type="button" class="btn btn-large" type="button" name="submit" id="regis-submit-btn" style="margin-left:275px;">绑定</button>
+      <button type="button" class="btn btn-large" type="button" name="submit" id="login-submit-btn" style="margin-left:275px;">绑定</button>
     </div>
     </fieldset>
  
@@ -42,6 +50,7 @@
     </div>
     <div class="span4">
       <div id="legend" class="">
+      	
           <legend class="">快速通过社交帐号登录</legend>
         </div>
         <div id="legend" class="">
@@ -49,11 +58,101 @@
           
         </div>
     </div>
-  </div>
-</div>
-  <legend class="" style="margin-top:20px"></legend>
+    <legend class="" style="margin-top:20px"></legend>
           已有帐号？
           <button type="submit" class="btn btn-primary" type="button">登录</button>
           
         </div>
+  </div>
+
+  <div class="container">
+  <div class="row">
+    <div class="span8">
+
+  <?=form_open('index/do_regist','class="form-horizontal"') ?>
+    <fieldset>
+      <div id="legend" class="">
+	      	<?$radio = array(
+			    'name'        => 'newuser',
+			    'id'          => 'newuser',
+			    'value'       => 'accept',
+			    'checked'     => TRUE,
+			    
+			    );
+	      	form_radio($radio);?>
+        <legend class="">绑定-新账号</legend>
+      </div>
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">邮箱</label>
+          <div class="controls">
+            <input type="text" placeholder="您的邮箱地址" class="input-xlarge" id="email" name="email">
+            <p class="help-block"></p>
+            <input type="hidden" id="email_code">
+          </div>
+        </div>
+
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">密码</label>
+          <div class="controls">
+            <input type="password" placeholder="您的密码" class="input-xlarge" maxlength="20" id="pwd" name="pwd">
+            <p class="help-block">6-20位字母或数字组合</p>
+            <span class="prompt" id="pwd_prompt"></span>
+          </div>
+        </div>
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">再次输入密码</label>
+          <div class="controls">
+            <input type="password" placeholder="确认密码" class="input-xlarge" maxlength="20" id="cpwd" name="cpwd">
+            <p class="help-block"></p>
+            <span class="prompt" id="cpwd_prompt"></span>
+          </div>
+        </div>
+
+
+    <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">真实姓名</label>
+          <div class="controls">
+            <input type="text" placeholder="您的姓名" class="input-xlarge" id="name" name="name">
+            <p class="help-block"></p>
+            <span class="prompt" id="name_prompt"></span>
+          </div>
+        </div>
+
+        <div class="control-group">
+
+          <!-- Text input-->
+          <label class="control-label" for="input01">验证码</label>
+          <div class="controls">
+            <img src="<?php echo base_url('index/show_captcha');?>" onclick="this.src='<?php echo base_url('index/show_captcha?');?>'+Math.random();"   />
+            <input type="captcha" placeholder="" class="input-xlarge" maxlength="10" id="captcha" name="captcha" style="width:190px">
+            <p class="help-block"></p>
+            <input type="hidden" value="" id="captcha_code">
+            <span class="prompt" id="captcha_prompt"></span>
+          </div>
+        </div>
+
+
+
+
+    <div class="sub-btn">
+      <button type="button" class="btn btn-large" type="button" name="submit2" id="regis-submit-btn" style="margin-left:275px;">注册</button>
     </div>
+    </fieldset>
+     <?=form_close() ?>
+
+    </div>
+   
+  </div>
+</div>
+</body>
+<? $this->load->view('inc/footer_view') ?>
