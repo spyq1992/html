@@ -70,26 +70,13 @@
 
 
     <div class="sub-btn">
-      <button type="button" class="btn btn-large" type="button" name="submit" id="regis-submit-btn" style="margin-left:275px;">注册</button>
+      <button type="button" class="btn btn-large" type="button" name="submit2" id="regis-submit-btn" style="margin-left:275px;">注册</button>
     </div>
     </fieldset>
      <?=form_close() ?>
 
     </div>
-    <div class="span4">
-      <div id="legend" class="">
-          <legend class="">快速通过社交帐号登录</legend>
-        </div>
-        <div id="legend" class="">
-          <a href="<?=base_url('index/loginWithWeibo')?>"><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
-          <br><br>
-          <a href=""><img src="<?=base_url('resource/images/douban.png') ?>"></a>
-          <legend class="" style="margin-top:20px"></legend>
-          已有帐号？
-          <button type="submit" class="btn btn-primary" type="button">登录</button>
-          
-        </div>
-    </div>
+   
   </div>
 </div>
 </body>
