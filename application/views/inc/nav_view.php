@@ -1,9 +1,10 @@
 <?php 
-	if($this->session->userdata('uid')){
-		$is_login=1;
+	if($this->session->userdata('is_login')==1){
+		
 		$session=$this->session->all_userdata();
 		$name=$session['userdata']['screen_name'];
 		$id=$session['uid'];
+		$is_login=$this->session->userdata('is_login');
 	}
 //	if($this->session->userdata('id'))
 //	{
@@ -14,9 +15,7 @@
 //		$avatar=$this->session->userdata('avatar');
 //		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
 //  }
-	else{
-		$is_login=0;
-	}
+	
 ?>
  <script type="text/javascript" src="<?=site_url("/resource/js/message_query.js") ?>"></script>
 <div class="navbar">

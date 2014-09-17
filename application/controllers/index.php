@@ -189,23 +189,29 @@ class Index extends CI_Controller {
 						'type'=>'weibo',
 						'userdata'=>$userdata,
 						'token'=>$token,
-						'newuser'=> 0
+						'newuser'=> 0,
+						'is_login'=> 1,
 					);
 					$session = $this->weibo_model->get_user_by_uid($uid['uid']);
 					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
 				else{
-					$data['title'] = $userdata['screen_name'];
 					$session=array(
 						'uid'=>$uid['uid'],
 						'type'=>'weibo',
 						'userdata'=>$userdata,
 						'token'=>$token,
-						'newuser'=> 1
+						'newuser'=> 1,
+						'is_login'=> 0
 					);
+					$data['title'] = $userdata['screen_name'];
+					$data['css'] = array('welcome.css');
+					$data['js'] = array('login_view.js');
 					$this->session->set_userdata($session);
-					$this->load->view('sinacallback',$data);
+					$this->load->view('sub_register',$data);
+					$data['js']=array('regist_view.js');
+					$this->load->view('sub_register2',$data);
 				}
 			}
 			
