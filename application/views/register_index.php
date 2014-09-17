@@ -85,7 +85,7 @@
           <legend class="">快速通过社交帐号登录</legend>
         </div>
         <div id="legend" class="">
-          <a href="<?=$code_url?>"><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
+          <a href="<?=base_url('index/loginWithWeibo')?>"><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
           <br><br>
           <a href=""><img src="<?=base_url('resource/images/douban.png') ?>"></a>
           <legend class="" style="margin-top:20px"></legend>

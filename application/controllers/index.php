@@ -53,7 +53,6 @@ class Index extends CI_Controller {
 			$data['title'] = '注册';
 			$data['css'] = array('welcome.css');
 			$data['js'] = array('regist_view.js');			
-			$this->session->set_userdata($session);
 			$this->load->view('register_index',$data);
 		
 	
