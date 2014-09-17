@@ -15,7 +15,6 @@
             <input type="text" placeholder="您的邮箱地址" class="input-xlarge" id="email" name="email">
             <p class="help-block"></p>
             <input type="hidden" id="email_code">
-            <span class="prompt" id="email_prompt"></span>
           </div>
         </div>
 

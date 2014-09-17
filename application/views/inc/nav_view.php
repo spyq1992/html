@@ -7,7 +7,7 @@
 		$is_login=1;
 	}
 	else{
-		$is_login=0
+		$is_login=0;
 	}
 //	if($this->session->userdata('id'))
 //	{
