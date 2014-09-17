@@ -22,34 +22,41 @@ class Index extends CI_Controller {
 
 	public function register()
 	{
-		if($_POST!=null){
-			$code=$_POST['code'];
-			$apiUrl1="https://api.weibo.com/oauth2/access_token?client_id=392060278&client_secret=58affb1572f7799811865bb6413148b4&grant_type=authorization_code&code=".$code."&redirect_uri=partyus.wicp.net/index/register";
-			$ch1 = curl_init();
-			curl_setopt($ch1, CURLOPT_URL, $apiUrl);
-			curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch1, CURLOPT_ENCODING, 'UTF-8');
-			$token = curl_exec($ch1);
-			var_dump($token);
-			
-		}
-		else{
+//		if($_POST!=null){
+			// $code=$_POST['code'];
+			// $apiUrl1="https://api.weibo.com/oauth2/access_token?client_id=392060278&client_secret=58affb1572f7799811865bb6413148b4&grant_type=authorization_code&code=".$code."&redirect_uri=partyus.wicp.net/index/register";
+			// $ch1 = curl_init();
+			// curl_setopt($ch1, CURLOPT_URL, $apiUrl);
+			// curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+			// curl_setopt($ch1, CURLOPT_ENCODING, 'UTF-8');
+			// $token = curl_exec($ch1);
+			// var_dump($token);
+// 			
+		// }
+		// else{
+			// $data['title'] = '注册';
+			// //$data['css'] = array('welcome.css');
+			// $data['js'] = array('regist_view.js');
+// 
+// 
+			// //微博相关信息生成
+			// $o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+			// $state = uniqid( 'weibo_', true);
+			// $session = array(
+					// 'weibo_state' => $state
+			// );
+			// $this->session->set_userdata($session);
+			// $data['code_url'] = $o->getAuthorizeURL( WB_CALLBACK_URL , 'code', $state );
+// 
+			// $this->load->view('register_index',$data);
+	//	}
 			$data['title'] = '注册';
-			//$data['css'] = array('welcome.css');
-			$data['js'] = array('regist_view.js');
-
-
-			//微博相关信息生成
-			$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
-			$state = uniqid( 'weibo_', true);
-			$session = array(
-					'weibo_state' => $state
-			);
+			$data['css'] = array('welcome.css');
+			$data['js'] = array('regist_view.js');			
 			$this->session->set_userdata($session);
-			$data['code_url'] = $o->getAuthorizeURL( WB_CALLBACK_URL , 'code', $state );
-
 			$this->load->view('register_index',$data);
-		}
+		
+	
 	}
 
 	public function show_captcha(){    
@@ -182,7 +189,8 @@ class Index extends CI_Controller {
 						'uid'=>$uid['uid'],
 						'type'=>'weibo',
 						'userdata'=>$userdata,
-						'token'=>$token
+						'token'=>$token,
+						'newuser'=> 0
 					);
 					$session = $this->weibo_model->get_user_by_uid($uid['uid']);
 					$this->session->set_userdata($session);
@@ -194,7 +202,8 @@ class Index extends CI_Controller {
 						'uid'=>$uid['uid'],
 						'type'=>'weibo',
 						'userdata'=>$userdata,
-						'token'=>$token
+						'token'=>$token,
+						'newuser'=> 1
 					);
 					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
