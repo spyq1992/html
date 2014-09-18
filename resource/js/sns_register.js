@@ -44,7 +44,7 @@
 });
 
 $(function() {
-	$("#captcha").blur(function(){
+	$("#captcha").click(function(){
 		$capt=$("#captcha").val();
 		if($capt=='')
 		{
@@ -73,13 +73,14 @@ $(function() {
 		}
 	});
 });
-
+$(function() {
 $("#newuser").click(function(){
-	$("#olduser").disable();
-	$("#user_email").disable();
-	$("#user_pwd").disable();
+	$("#olduser").attr('disabled',"true");
+	$("#user_email").attr('disabled',"true");
+	$("#user_pwd").attr('disabled',"true");
 	
 });
+}
 $(function() {
 	$("#email").blur(function(){
 		//1、检查是否为空
