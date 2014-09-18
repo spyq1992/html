@@ -20,7 +20,7 @@
           <div class="controls">
             <input type="text" placeholder="您的邮箱地址" class="input-xlarge" id="user_email" name="user_email">
             <p class="help-block"></p>
-            <input type="hidden" id="email_code">
+            <input type="hidden" id="user_email_code">
             <span class="prompt" id="user_email_prompt"></span>
           </div>
         </div>

@@ -80,6 +80,7 @@ $("#newuser").click(function(){
 	$("#user_pwd").attr('disabled',"true");
 	
 });
+});
 }
 $(function() {
 	$("#email").blur(function(){
@@ -227,7 +228,7 @@ $(function() {
 			//成功跳转至首页，失败显示错误原因
 			$.ajax({
 	              type:"post",
-	              data: "user_email_in=" + $("#user_email").val()+"&user_password_in="+$("#user_pwd").val(),
+	              data: "email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
 	              url:"/index/do_login",
 	               success: function(result)
 	               {
