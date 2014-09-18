@@ -210,7 +210,6 @@ class Index extends CI_Controller {
 					$data['js'] = array('sns_register.js');
 					$this->session->set_userdata($session);
 					$this->load->view('sub_register',$data);
-					$this->load->view('sub_register2',$data);
 				}
 			}
 			
