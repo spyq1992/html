@@ -207,10 +207,9 @@ class Index extends CI_Controller {
 					);
 					$data['title'] = $userdata['screen_name'];
 					$data['css'] = array('welcome.css');
-					$data['js'] = array('login_view.js');
+					$data['js'] = array('sns_register.js');
 					$this->session->set_userdata($session);
 					$this->load->view('sub_register',$data);
-					$data['js']=array('regist_view.js');
 					$this->load->view('sub_register2',$data);
 				}
 			}

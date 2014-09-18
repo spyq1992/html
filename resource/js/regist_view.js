@@ -1,4 +1,5 @@
- $(function() {
+$.noConflict(); 
+$(function() {
 	$("#name").blur(function(){
 		name_check();
 	});
