@@ -75,12 +75,32 @@ $(function() {
 });
 $(function() {
 $("#newuser").click(function(){
-	$("#olduser").attr('disabled',"true");
-	$("#user_email").attr('disabled',"true");
-	$("#user_pwd").attr('disabled',"true");
+	$("#control1").hide(1000);
+	$("#control2").hide(1000);
+	$("#control3").hide(1000);
+	$("#control4").show(1000);
+	$("#control5").show(1000);
+	$("#control6").show(1000);
+	$("#control7").show(1000);
+	$("#control8").show(1000);
+	$("#control9").show(1000);
 	
 });
 });
+$(function() {
+	$("#olduser").click(function(){
+		$("#control1").show(1000);
+		$("#control2").show(1000);
+		$("#control3").show(1000);
+		$("#control4").hide(1000);
+		$("#control5").hide(1000);
+		$("#control6").hide(1000);
+		$("#control7").hide(1000);
+		$("#control8").hide(1000);
+		$("#control9").hide(1000);
+		
+	});
+	});
 
 $(function() {
 	$("#email").blur(function(){

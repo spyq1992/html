@@ -13,7 +13,7 @@
       	
         <legend class=""><input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  /> 绑定-已有账号</legend>
       </div>
-    <div class="control-group">
+    <div class="control-group" id='control1'>
 
           <!-- Text input-->
           <label class="control-label" for="input01">邮箱</label>
@@ -26,7 +26,7 @@
         </div>
 
 
-   		<div class="control-group">
+   		<div class="control-group" id='control2'>
 
           <!-- Text input-->
           <label class="control-label" for="input01">密码</label>
@@ -35,7 +35,7 @@
             <span class="prompt" id="user_pwd_prompt"></span>
           </div>
         </div>
-	<div class="sub-btn">
+	<div class="sub-btn" id='control3'>
       <button type="button" class="btn btn-large" type="button" name="submit" id="login-submit-btn" style="margin-left:275px;">绑定</button>
     </div>
     </fieldset>
@@ -69,7 +69,7 @@
 	      
         <legend class=""><input type="radio" name="olduser" id="olduser" value="accept"   /> 绑定-新账号</legend>
       </div> <?=form_close() ?><?=form_open('index/do_regist','class="form-horizontal"') ?>
-    <div class="control-group">
+    <div class="control-group" id='control4'>
 
           <!-- Text input-->
           <label class="control-label" for="input01">邮箱</label>
@@ -82,7 +82,7 @@
         </div>
 
 
-    <div class="control-group">
+    <div class="control-group" id='control5'>
 
           <!-- Text input-->
           <label class="control-label" for="input01">密码</label>
@@ -93,7 +93,7 @@
           </div>
         </div>
 
-    <div class="control-group">
+    <div class="control-group" id='control6'>
 
           <!-- Text input-->
           <label class="control-label" for="input01">再次输入密码</label>
@@ -105,7 +105,7 @@
         </div>
 
 
-    <div class="control-group">
+    <div class="control-group" id='control7'>
 
           <!-- Text input-->
           <label class="control-label" for="input01">真实姓名</label>
@@ -116,7 +116,7 @@
           </div>
         </div>
 
-        <div class="control-group">
+        <div class="control-group" id='control8'>
 
           <!-- Text input-->
           <label class="control-label" for="input01">验证码</label>
@@ -132,7 +132,7 @@
 
 
 
-    <div class="sub-btn">
+    <div class="sub-btn" id='control9'>
       <button type="button" class="btn btn-large" type="button" name="submit2" id="regis-submit-btn" style="margin-left:275px;">注册</button>
     </div>
     </fieldset>
