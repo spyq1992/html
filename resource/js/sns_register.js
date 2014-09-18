@@ -74,7 +74,7 @@ $(function() {
 	});
 });
 $(function() {
-$("#newuser").click(function(){
+$("#newuser").blur(function(){
 	$("#control1").hide(1000);
 	$("#control2").hide(1000);
 	$("#control3").hide(1000);
@@ -86,9 +86,9 @@ $("#newuser").click(function(){
 	$("#control9").show(1000);
 	
 });
-});
+})
 $(function() {
-	$("#olduser").click(function(){
+	$("#olduser").blur(function(){
 		$("#control1").show(1000);
 		$("#control2").show(1000);
 		$("#control3").show(1000);
@@ -100,7 +100,7 @@ $(function() {
 		$("#control9").hide(1000);
 		
 	});
-	});
+	})
 
 $(function() {
 	$("#email").blur(function(){
