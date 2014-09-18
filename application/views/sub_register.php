@@ -11,7 +11,7 @@
       	
 			
       	
-        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  />绑定-已有账号</legend>
+        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  /> 绑定-已有账号</legend>
       </div>
     <div class="control-group">
 
@@ -67,15 +67,8 @@
   <?=form_open('index/do_regist','class="form-horizontal"') ?>
     <fieldset>
       <div id="legend" class="">
-	      	<?$radio = array(
-			    'name'        => 'newuser',
-			    'id'          => 'newuser',
-			    'value'       => 'accept',
-			    'checked'     => TRUE,
-			    
-			    );
-	      	form_radio($radio);?>
-        <legend class="">绑定-新账号</legend>
+	      
+        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  /> 绑定-新账号</legend>
       </div>
     <div class="control-group">
 
@@ -85,6 +78,7 @@
             <input type="text" placeholder="您的邮箱地址" class="input-xlarge" id="email" name="email">
             <p class="help-block"></p>
             <input type="hidden" id="email_code">
+            <span class="prompt" id="email_prompt"></span>
           </div>
         </div>
 
