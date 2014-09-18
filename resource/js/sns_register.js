@@ -81,7 +81,7 @@ $("#newuser").click(function(){
 	
 });
 });
-}
+
 $(function() {
 	$("#email").blur(function(){
 		//1、检查是否为空
