@@ -53,18 +53,18 @@
           
         </div>
     </div>
-    <legend class="" style="margin-top:20px"></legend>
+    
           已有帐号？
           <button type="submit" class="btn btn-primary" type="button">登录</button>
           
         </div>
   </div>
-
+<?=form_close() ?>
   <div class="container">
   <div class="row">
     <div class="span8">
 
- 
+ <?=form_open('index/do_regist','class="form-horizontal"') ?>
     <fieldset>
       <div id="legend" class="">
 	      

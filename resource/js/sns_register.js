@@ -78,7 +78,7 @@ $("#newuser").click(function(){
 	$("#olduser").disable();
 	$("#user_email").disable();
 	$("#user_pwd").disable();
-	$("#")
+	
 });
 $(function() {
 	$("#email").blur(function(){
@@ -212,13 +212,13 @@ function captcha_check(type) {
 }
 $(function() {
 	$("#user_email").blur(function(){
-		email_check();
+		user_email_check();
 	});
 	
 	$("#user_pwd").blur(function(){
-		pass_check();
+		user_pass_check();
 	});
-	$("newuser").
+	
 	$("#login-submit-btn").click(function(){
 		if(email_check()&&pass_check())
 		{
