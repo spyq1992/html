@@ -40,7 +40,7 @@
     </div>
     </fieldset>
  
-     <?=form_close() ?>
+    
 
     </div>
     <div class="span4">
@@ -64,7 +64,7 @@
   <div class="row">
     <div class="span8">
 
-  <?=form_open('index/do_regist','class="form-horizontal"') ?>
+ 
     <fieldset>
       <div id="legend" class="">
 	      
