@@ -221,13 +221,13 @@ $(function() {
 	});
 	
 	$("#login-submit-btn").click(function(){
-		if(email_check()&&pass_check())
+		if(user_email_check()&&user_pass_check())
 		{
 			//ajax登录
 			//成功跳转至首页，失败显示错误原因
 			$.ajax({
 	              type:"post",
-	              data: "email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
+	              data: "user_email_in=" + $("#user_email").val()+"&user_password_in="+$("#user_pwd").val(),
 	              url:"/index/do_login",
 	               success: function(result)
 	               {
