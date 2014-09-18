@@ -68,7 +68,7 @@
     <fieldset>
       <div id="legend" class="">
 	      
-        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  /> 绑定-新账号</legend>
+        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept"   /> 绑定-新账号</legend>
       </div>
     <div class="control-group">
 
