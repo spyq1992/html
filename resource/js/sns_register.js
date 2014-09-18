@@ -265,11 +265,11 @@ $(function() {
 function user_pass_check() {
 	val = $("#user_pwd").val();
 	if(val=='') {
-		$("#pwd_prompt").css({color:"red"});
-		$("#pwd_prompt").text('密码不能为空');
+		$("#user_pwd_prompt").css({color:"red"});
+		$("#user_pwd_prompt").text('密码不能为空');
 		return false;
 	} else if(val!=='') {
-		$("#pwd_prompt").text('');
+		$("#user_pwd_prompt").text('');
 		return true;
 	}
 }
@@ -279,15 +279,15 @@ function user_email_check() {
 	val = $("#user_email").val();
 	var myreg = /\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/;		
 		if(val=='') {
-			$("#email_prompt").css({color:"red"});
-			$("#email_prompt").text('邮箱不能为空');
+			$("#user_email_prompt").css({color:"red"});
+			$("#user_email_prompt").text('邮箱不能为空');
 			return false;
 		} else if(!myreg.test(val)) {
-			$("#email_prompt").css({color:"red"});
-			$("#email_prompt").text('邮箱格式不正确');
+			$("#user_email_prompt").css({color:"red"});
+			$("#user_email_prompt").text('邮箱格式不正确');
 			return false;
 		} else {
-			$("#email_prompt").text('');
+			$("#user_email_prompt").text('');
 			return true;
 		}
 }

@@ -26,7 +26,7 @@
             <input type="text" placeholder="您的邮箱地址" class="input-xlarge" id="user_email" name="user_email">
             <p class="help-block"></p>
             <input type="hidden" id="email_code">
-            <span class="prompt" id="email_prompt"></span>
+            <span class="prompt" id="user_email_prompt"></span>
           </div>
         </div>
 
@@ -37,7 +37,7 @@
           <label class="control-label" for="input01">密码</label>
           <div class="controls">
             <input type="password" placeholder="您的密码" class="input-xlarge" maxlength="20" id="user_pwd" name="user_pwd">
-            <span class="prompt" id="pwd_prompt"></span>
+            <span class="prompt" id="user_pwd_prompt"></span>
           </div>
         </div>
 	<div class="sub-btn">
