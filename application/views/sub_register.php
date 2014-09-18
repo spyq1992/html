@@ -8,15 +8,10 @@
   <?=form_open('index/do_login','class="form-horizontal"') ?>
   <fieldset>
       <div id="legend" class="">
-      	<?$radio = array(
-		    'name'        => 'olduser',
-		    'id'          => 'olduser',
-		    'value'       => 'accept',
-		    'checked'     => TRUE,
-		    
-		    );
-      	form_radio($radio);?>
-        <legend class="">绑定-已有账号</legend>
+      	
+			
+      	
+        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  />绑定-已有账号</legend>
       </div>
     <div class="control-group">
 
