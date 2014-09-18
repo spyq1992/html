@@ -43,33 +43,32 @@
     
 
     </div>
-    <div class="span4">
+       <div class="span4">
       <div id="legend" class="">
-      	
           <legend class="">快速通过社交帐号登录</legend>
         </div>
         <div id="legend" class="">
-          <a href="<?=base_url('index/loginWithWeibo')?>" > <img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
-          
-        </div>
-    </div>
-    
+          <a href="<?=base_url('index/loginWithWeibo')?>"><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
+          <br><br>
+          <a href=""><img src="<?=base_url('resource/images/douban.png') ?>"></a>
+          <legend class="" style="margin-top:20px"></legend>
           已有帐号？
           <button type="submit" class="btn btn-primary" type="button">登录</button>
           
         </div>
-  </div>
-<?=form_close() ?>
+    </div>
+    
+
   <div class="container">
   <div class="row">
     <div class="span8">
 
- <?=form_open('index/do_regist','class="form-horizontal"') ?>
+
     <fieldset>
       <div id="legend" class="">
 	      
         <legend class=""><input type="radio" name="olduser" id="olduser" value="accept"   /> 绑定-新账号</legend>
-      </div>
+      </div> <?=form_close() ?><?=form_open('index/do_regist','class="form-horizontal"') ?>
     <div class="control-group">
 
           <!-- Text input-->
