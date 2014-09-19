@@ -74,7 +74,8 @@ $(function() {
 	});
 });
 $(function() {
-$("#newuser").blur(function(){
+$("#newuser").click(function(){
+	
 	$("#control1").hide(1000);
 	$("#control2").hide(1000);
 	$("#control3").hide(1000);
@@ -84,11 +85,10 @@ $("#newuser").blur(function(){
 	$("#control7").show(1000);
 	$("#control8").show(1000);
 	$("#control9").show(1000);
-	
-});
-})
+	});
+})	
 $(function() {
-	$("#olduser").blur(function(){
+	$("#olduser").click(function(){
 		$("#control1").show(1000);
 		$("#control2").show(1000);
 		$("#control3").show(1000);
