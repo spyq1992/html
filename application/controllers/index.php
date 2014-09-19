@@ -122,23 +122,21 @@ class Index extends CI_Controller {
 
     public function do_login()
     {
-    	$session=$this->session->all_userdata();
-		$id=$session['uid'];	
-		$session['is_login']=1;
+    	
+		
     	$data['email']=$_POST['email_in'];
     	$data['password']=$_POST['password_in'];
     	if($this->User_model->login($data))
 		{
 			//成功设置session
 			$result=$this->User_model->get_user($data['email']);
-			// $session = array(
-				// 'id' => $result['id'],
-				// 'email' => $result['email'],
-				// 'real_name' => $result['real_name'],
-				// 'avatar' => $result['avatar']
-			// );
-			$this->session->set_userdata($session);
-			
+			$session = array(
+				'id' => $result['id'],
+				'email' => $result['email'],
+				'real_name' => $result['real_name'],
+				'avatar' => $result['avatar']
+			);
+			$this->session->set_userdata($session);	
 			
 			echo 'suc';
 		}
