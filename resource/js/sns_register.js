@@ -74,30 +74,41 @@ $(function() {
 	});
 });
 $(function() {
+	
 $("#newuser").click(function(){
 	
-	$("#control1").hide(1000);
-	$("#control2").hide(1000);
-	$("#control3").hide(1000);
-	$("#control4").show(1000);
-	$("#control5").show(1000);
-	$("#control6").show(1000);
-	$("#control7").show(1000);
-	$("#control8").show(1000);
-	$("#control9").show(1000);
+	$("#control1").hide(500);
+	$("#control2").hide(500);
+	$("#control3").hide(500);
+	$("#control4").show(500);
+	$("#control5").show(500);
+	$("#control6").show(500);
+	$("#control7").show(500);
+	$("#control8").show(500);
+	$("#control9").show(500);
 	});
 })	
+
 $(function() {
+	$("#control1").show();
+	$("#control2").show();
+	$("#control3").show();
+	$("#control4").hide();
+	$("#control5").hide();
+	$("#control6").hide();
+	$("#control7").hide();
+	$("#control8").hide();
+	$("#control9").hide();
 	$("#olduser").click(function(){
-		$("#control1").show(1000);
-		$("#control2").show(1000);
-		$("#control3").show(1000);
-		$("#control4").hide(1000);
-		$("#control5").hide(1000);
-		$("#control6").hide(1000);
-		$("#control7").hide(1000);
-		$("#control8").hide(1000);
-		$("#control9").hide(1000);
+		$("#control1").show(500);
+		$("#control2").show(500);
+		$("#control3").show(500);
+		$("#control4").hide(500);
+		$("#control5").hide(500);
+		$("#control6").hide(500);
+		$("#control7").hide(500);
+		$("#control8").hide(500);
+		$("#control9").hide(500);
 		
 	});
 	})
