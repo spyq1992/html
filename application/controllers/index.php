@@ -135,6 +135,8 @@ class Index extends CI_Controller {
 				'avatar' => $result['avatar']
 			);
 			$this->session->set_userdata($session);
+			$this->session->set_userdata('is_login', 1);
+			
 			echo "suc";
 		}
 		else{
@@ -180,7 +182,7 @@ class Index extends CI_Controller {
 				$userdata=array();
 				$userdata=$this->saetoauthv->get('users/show',$token);
 				
-				var_dump($uid);
+				
 				if($this->Weibo_model->exist_uid($uid['uid'])){
 					$data=array();
 					$data['title'] = $userdta['screen_name'];
@@ -212,6 +214,7 @@ class Index extends CI_Controller {
 					$this->load->view('sub_register',$data);
 				}
 			}
+else redirect('/index');
 			
 	}
 	public function loginWithWeibo(){

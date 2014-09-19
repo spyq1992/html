@@ -11,7 +11,7 @@
       	
 			
       	
-        <legend class=""><input type="radio" name="userstatus" id="olduser" value="accept" checked="checked"  /> 绑定-已有账号</legend>
+        <legend class="">  <input type="radio" name="userstatus" id="olduser" value="accept" checked="checked"  /> 绑定-已有账号</legend>
       </div>
     <div class="control-group" id='control1'>
 
