@@ -180,7 +180,7 @@ class Index extends CI_Controller {
 				$userdata=array();
 				$userdata=$this->saetoauthv->get('users/show',$token);
 				
-				
+				var_dump($uid);
 				if($this->Weibo_model->exist_uid($uid['uid'])){
 					$data=array();
 					$data['title'] = $userdta['screen_name'];
