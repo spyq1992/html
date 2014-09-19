@@ -1,4 +1,3 @@
-$.noConflict();
 $(function() {
 	$("#email").blur(function(){
 		email_check();
