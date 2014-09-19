@@ -140,16 +140,16 @@ class Index extends CI_Controller {
 			$this->session->set_userdata($session);
 			
 			
-			echo "suc";
+			return "suc";
 		}
 		else{
 			$email_validate=$this->User_model->get_email($data['email']);
 			if($email_validate==0)
 			{
-				echo 'emptyemail';
+				return 'emptyemail';
 			}
 			else{
-				echo 'wrongpwd';
+				return 'wrongpwd';
 			}
 		}
     }
