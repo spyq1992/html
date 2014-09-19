@@ -140,7 +140,7 @@ class Index extends CI_Controller {
 			$this->session->set_userdata($session);
 			
 			
-			return "suc";
+			return 'suc';
 		}
 		else{
 			$email_validate=$this->User_model->get_email($data['email']);
@@ -206,7 +206,6 @@ class Index extends CI_Controller {
 						'uid'=>$uid['uid'],
 						'type'=>'weibo',
 						'userdata'=>$userdata,
-						'token'=>$token,
 						'newuser'=> 1,
 						'is_login'=> 0
 					);

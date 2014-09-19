@@ -1,23 +1,16 @@
 <?php 
-	if($this->session->userdata('is_login')==1){
-		
-		$session=$this->session->all_userdata();
-		$name=$session['userdata']['screen_name'];
-		$id=$session['uid'];
+	
+	if($this->session->userdata('id'))
+	{
 		$is_login=1;
-	}
-	else{
+		$name=$this->session->userdata('real_name');
+		$email=$this->session->userdata('email');
+		$id=$this->session->userdata('id');
+		$avatar=$this->session->userdata('avatar');
+		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
+ }else{
 		$is_login=0;
 	}
-//	if($this->session->userdata('id'))
-//	{
-//		$is_login=1;
-//		$name=$this->session->userdata('real_name');
-//		$email=$this->session->userdata('email');
-//		$id=$this->session->userdata('id');
-//		$avatar=$this->session->userdata('avatar');
-//		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
-//  }
 	
 ?>
  <script type="text/javascript" src="<?=site_url("/resource/js/message_query.js") ?>"></script>
@@ -44,7 +37,7 @@
 									<ul class="nav pull-left">
 										<li class="dropdown active">
 											 <a data-toggle="dropdown" class="dropdown-toggle" href="#"><img src="
-											 	<? echo $session['userdata']['profile_image_url'] ?>
+											 	<? echo $avatar ?>
 											 	" width="25px" height="25px"><?php echo $name; ?><strong class="caret"></strong></a>
 											<ul class="dropdown-menu">
 												<li>
