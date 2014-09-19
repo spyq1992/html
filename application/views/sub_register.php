@@ -67,7 +67,7 @@
     <fieldset>
       <div id="legend" class="">
 	      
-        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept"   /> 绑定-新账号</legend>
+        <legend class=""><input type="radio" name="newuser" id="newuser" value="accept"   /> 绑定-新账号</legend>
       </div> <?=form_close() ?><?=form_open('index/do_regist','class="form-horizontal"') ?>
     <div class="control-group" id='control4'>
 
