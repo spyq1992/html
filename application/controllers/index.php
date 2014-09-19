@@ -9,7 +9,7 @@ class Index extends CI_Controller {
 			$this->load->model('Weibo_model');
 			$this->load->library('saetoauthv');
 			$this->load->library('saetclientv');
-			
+			$this->load->library('session');
 			
 	}
 
@@ -128,13 +128,13 @@ class Index extends CI_Controller {
 		{
 			//成功设置session
 			$result=$this->User_model->get_user($data['email']);
-			$session = array(
-				'id' => $result['id'],
-				'email' => $result['email'],
-				'real_name' => $result['real_name'],
-				'avatar' => $result['avatar']
-			);
-			$this->session->set_userdata($session);
+			// $session = array(
+				// 'id' => $result['id'],
+				// 'email' => $result['email'],
+				// 'real_name' => $result['real_name'],
+				// 'avatar' => $result['avatar']
+			// );
+			// $this->session->set_userdata($session);
 			$this->session->set_userdata('is_login', 1);
 			
 			echo "suc";
