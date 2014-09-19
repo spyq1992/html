@@ -11,7 +11,7 @@
       	
 			
       	
-        <legend class=""><input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  /> 绑定-已有账号</legend>
+        <legend class=""><input type="radio" name="olduser" id="userstatus" value="accept" checked="checked"  /> 绑定-已有账号</legend>
       </div>
     <div class="control-group" id='control1'>
 
@@ -43,20 +43,7 @@
     
 
     </div>
-       <div class="span4">
-      <div id="legend" class="">
-          <legend class="">快速通过社交帐号登录</legend>
-        </div>
-        <div id="legend" class="">
-          <a href="<?=base_url('index/loginWithWeibo')?>"><img src="<?=base_url('resource/images/sinaweibo.gif') ?>"></a>
-          <br><br>
-          <a href=""><img src="<?=base_url('resource/images/douban.png') ?>"></a>
-          <legend class="" style="margin-top:20px"></legend>
-          已有帐号？
-          <button type="submit" class="btn btn-primary" type="button">登录</button>
-          
-        </div>
-    </div>
+      
     
 
   <div class="container">
@@ -67,7 +54,7 @@
     <fieldset>
       <div id="legend" class="">
 	      
-        <legend class=""><input type="radio" name="newuser" id="newuser" value="accept"   /> 绑定-新账号</legend>
+        <legend class=""><input type="radio" name="userstatus" id="newuser" value="accept"   /> 绑定-新账号</legend>
       </div> <?=form_close() ?><?=form_open('index/do_regist','class="form-horizontal"') ?>
     <div class="control-group" id='control4'>
 
