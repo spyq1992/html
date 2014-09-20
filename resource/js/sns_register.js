@@ -260,7 +260,7 @@ $(function() {
 			$.ajax({
 	              type:"post",
 	              data: "email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
-	              url:"/index/do_login",
+	              url:"/index/link_sns",
 	               success: function(result)
 	               {
 	                    if(result=='suc')

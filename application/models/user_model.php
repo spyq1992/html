@@ -78,6 +78,36 @@
 			}
 			return $userinfo;
 		}
+		// function get_user_by_uid($uid){
+			// $query = $this->db->get_where('user_sns', array('u_id' => $uid));
+			// foreach ($query->result() as $row)
+			// {
+				// $userinfo['email']= $row->email;
+				// $userinfo['real_name']= $row->real_name;
+				// $userinfo['id']= $row->id;
+			// }
+			// return $userinfo;
+		// }
+		function link_sns_to_user($data){
+			$newdata = array(
+			                'u_id'=> $data['id'],
+			                'uid' => $data['uid'],			                
+			                'token' => $data['token'],
+			                'type' => $date['type'],
+			                'linked'=>1
+			     );
+			$this->db->insert('user_sns', $newdata);
+		}
+		function add_new_sns_user($data){
+			$newdata = array(
+			                'u_id'=> $data['id'],
+			                'uid' => $data['uid'],			                
+			                'token' => $data['token'],
+			                'type' => $date['type'],
+			                'linked'=>0
+			     );
+			$this->db->insert('user_sns', $newdata);
+		}
 
 		function get_user_einfo($id)
 		{

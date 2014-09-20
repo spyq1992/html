@@ -5,7 +5,7 @@
   <div class="row">
     <div class="span8">
 
-  <?=form_open('index/do_login','class="form-horizontal"') ?>
+  <?=form_open('index/link_sns','class="form-horizontal"') ?>
   <fieldset>
       <div id="legend" class="">
       	
@@ -55,7 +55,7 @@
       <div id="legend" class="">
 	      
         <legend class=""><input type="radio" name="userstatus" id="newuser" value="accept"   /> 绑定-新账号</legend>
-      </div> <?=form_close() ?><?=form_open('index/do_regist','class="form-horizontal"') ?>
+      </div> <?=form_close() ?><?=form_open('index/regist_sns','class="form-horizontal"') ?>
     <div class="control-group" id='control4'>
 
           <!-- Text input-->
