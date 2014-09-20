@@ -37,7 +37,7 @@
         </div>
 	
    
-    </fieldset>
+    
  
     
 
@@ -50,7 +50,7 @@
     <div class="span8">
 
 
-    <fieldset>
+    
       <div id="legend" class="">
 	      
         <legend class=""><input type="radio" name="userstatus" id="newuser" value="accept"   /> 绑定-新账号</legend>

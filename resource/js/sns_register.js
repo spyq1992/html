@@ -94,7 +94,7 @@ $("#newuser").click(function(){
 	
 	$("#control1").hide(500);
 	$("#control2").hide(500);
-	$("#control3").hide(500);
+	$("#control3").show(500);
 	$("#control4").show(500);
 	$("#control5").show(500);
 	$("#control6").show(500);
@@ -106,7 +106,7 @@ $("#newuser").click(function(){
 $(function() {
 	$("#control1").show();
 	$("#control2").show();
-	$("#control3").show();
+	$("#control3").hide();
 	$("#control4").hide();
 	$("#control5").hide();
 	$("#control6").hide();
@@ -115,7 +115,7 @@ $(function() {
 	$("#olduser").click(function(){
 		$("#control1").show(500);
 		$("#control2").show(500);
-		$("#control3").show(500);
+		$("#control3").hide(500);
 		$("#control4").hide(500);
 		$("#control5").hide(500);
 		$("#control6").hide(500);
