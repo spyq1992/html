@@ -8,56 +8,10 @@
 	$("#cpwd").blur(function(){
 		cpass_check();
 	});
-	$("#regis-submit-btn").click(function(){
-		if(($("#email_code").val()=='3')&&name_check()&&pass_check()&&cpass_check()&&($("#captcha_code").val()=='1'))
-		{
-			$.ajax({
-	              type:"post",
-	              data: "email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"name="+$("#name").val(),
-	              url:"/index/regist_sns",
-	               success: function(result)
-	               {
-	                    if(result=='suc')
-	                    {
-	                    	$("#login_prompt").css({color:"green"});
-							$("#login_prompt").text('登录成功！');
-	                    	location.href="/index"; 
-	                    }
-	                   
-	               },                       
-	               error: function()
-	               {
-	                    alert("系统错误，请稍候重试...");
-	               
-		}
-		else{
-			if(email_check()==false)
-			{
-				alert("邮箱填写有误，请检查！");
-			}
-			else if(name_check()==false)
-			{
-				alert("姓名填写有误，请检查！");
-			}
-			else if(pass_check()==false)
-			{
-				alert("密码填写有误，请检查！");
-			}
-			else if(cpass_check()==false)
-			{
-				alert("确认密码填写有误，请检查！");
-			}
-			else if($("#captcha_code").val()=='0')
-			{
-				alert("验证码填写有误，请检查！");
-			}
-			else{
-				alert("注册信息填写有误，请检查！");
-			}
-		}
-	});
+	
+	
 });
-	})
+	
 $(function() {
 	$("#captcha").click(function(){
 		$capt=$("#captcha").val();
