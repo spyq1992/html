@@ -11,9 +11,24 @@
 	$("#regis-submit-btn").click(function(){
 		if(($("#email_code").val()=='3')&&name_check()&&pass_check()&&cpass_check()&&($("#captcha_code").val()=='1'))
 		{
-			$(".sub-btn").html('');
-			$(".sub-btn").append("<button type='submit' class='btn btn-large' type='button' name='submit' id='regis-submit-btn' style='margin-left:275px;'>注册</button>");
-			$("#regis-submit-btn").click();
+			$.ajax({
+	              type:"post",
+	              data: "email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"name="+$("#name").val(),
+	              url:"/index/regist_sns",
+	               success: function(result)
+	               {
+	                    if(result=='suc')
+	                    {
+	                    	$("#login_prompt").css({color:"green"});
+							$("#login_prompt").text('登录成功！');
+	                    	location.href="/index"; 
+	                    }
+	                   
+	               },                       
+	               error: function()
+	               {
+	                    alert("系统错误，请稍候重试...");
+	               
 		}
 		else{
 			if(email_check()==false)

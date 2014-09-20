@@ -134,7 +134,8 @@ class Index extends CI_Controller {
 				'id' => $result['id'],
 				'email' => $result['email'],
 				'real_name' => $result['real_name'],
-				'avatar' => $result['avatar']
+				'avatar' => $result['avatar'],
+				'is_login'=>1
 			);
 			$this->session->set_userdata($session);	
 			
