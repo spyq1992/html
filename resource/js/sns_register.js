@@ -266,7 +266,7 @@ $(function() {
 	
 	$("#link-btn").click(function(){
 		
-	if($("#newuser")..is(':checked')){
+	if($("#newuser").is(':checked')){
 		if(($("#email_code").val()=='3')&&name_check()&&pass_check()&&cpass_check()&&($("#captcha_code").val()=='1'))
 		{
 			$.ajax({
@@ -288,6 +288,9 @@ $(function() {
 	                    alert("系统错误，请稍候重试...");
 	               
 		}
+			});
+		}
+			
 		else{
 			if(email_check()==false)
 			{
@@ -313,8 +316,8 @@ $(function() {
 				alert("注册信息填写有误，请检查！");
 			}
 		}
-	});
-		}}
+	}
+		
 	if($("#olduser")..is(':checked')){
 		if(user_email_check()&&user_pass_check())
 		{
@@ -355,7 +358,8 @@ $(function() {
 			alert("登录信息填写有误，请检查！");
 		}
 	}
-	})
+	
+}
 });
 
 
