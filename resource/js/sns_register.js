@@ -99,8 +99,7 @@ $("#newuser").click(function(){
 	$("#control5").show(500);
 	$("#control6").show(500);
 	$("#control7").show(500);
-	$("#control8").show(500);
-	$("#control9").show(500);
+	
 	});
 })	
 
@@ -112,8 +111,7 @@ $(function() {
 	$("#control5").hide();
 	$("#control6").hide();
 	$("#control7").hide();
-	$("#control8").hide();
-	$("#control9").hide();
+	
 	$("#olduser").click(function(){
 		$("#control1").show(500);
 		$("#control2").show(500);
@@ -122,8 +120,7 @@ $(function() {
 		$("#control5").hide(500);
 		$("#control6").hide(500);
 		$("#control7").hide(500);
-		$("#control8").hide(500);
-		$("#control9").hide(500);
+		
 		
 	});
 	})
@@ -267,14 +264,65 @@ $(function() {
 		user_pass_check();
 	});
 	
-	$("#login-submit-btn").click(function(){
+	$("#link-btn").click(function(){
+		
+	if($("#newuser")..is(':checked')){
+		if(($("#email_code").val()=='3')&&name_check()&&pass_check()&&cpass_check()&&($("#captcha_code").val()=='1'))
+		{
+			$.ajax({
+	              type:"post",
+	              data: "user_status=new"+"email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"name="+$("#name").val(),
+	              url:"/index/link_sns",
+	               success: function(result)
+	               {
+	                    if(result=='suc')
+	                    {
+	                    	$("#login_prompt").css({color:"green"});
+							$("#login_prompt").text('登录成功！');
+	                    	location.href="/index"; 
+	                    }
+	                   
+	               },                       
+	               error: function()
+	               {
+	                    alert("系统错误，请稍候重试...");
+	               
+		}
+		else{
+			if(email_check()==false)
+			{
+				alert("邮箱填写有误，请检查！");
+			}
+			else if(name_check()==false)
+			{
+				alert("姓名填写有误，请检查！");
+			}
+			else if(pass_check()==false)
+			{
+				alert("密码填写有误，请检查！");
+			}
+			else if(cpass_check()==false)
+			{
+				alert("确认密码填写有误，请检查！");
+			}
+			else if($("#captcha_code").val()=='0')
+			{
+				alert("验证码填写有误，请检查！");
+			}
+			else{
+				alert("注册信息填写有误，请检查！");
+			}
+		}
+	});
+		}}
+	if($("#olduser")..is(':checked')){
 		if(user_email_check()&&user_pass_check())
 		{
 			//ajax登录
 			//成功跳转至首页，失败显示错误原因
 			$.ajax({
 	              type:"post",
-	              data: "email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
+	              data: "user_status=old"+"email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
 	              url:"/index/link_sns",
 	               success: function(result)
 	               {
@@ -306,7 +354,8 @@ $(function() {
 		else{
 			alert("登录信息填写有误，请检查！");
 		}
-	});
+	}
+	})
 });
 
 

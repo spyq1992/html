@@ -154,6 +154,8 @@ class Index extends CI_Controller {
     }
 	
 	public function link_sns(){
+		if($_POST['userstatus']=="old"){
+		
 		$data['email']=$_POST['email_in'];
     	$data['password']=$_POST['password_in'];
 		$session=$this->session->all_userdata();
@@ -189,6 +191,48 @@ class Index extends CI_Controller {
 			else{
 				echo 'wrongpwd';
 			}
+		}
+		}
+		else{
+		$data['email'] = $this->input->post('email');
+		$data['password'] = $this->input->post('pwd');
+		$data['real_name'] = $this->input->post('name');
+		$session=$this->session->all_userdata();
+		if($this->User_model->regist_user($data))
+		{
+			$mdata['message']="欢迎加入聚会神器！";
+			$mdata['title']="注册成功";
+			$mdata['message_type']="success";
+			$result=$this->User_model->get_user($data['email']);
+			$temp = array(
+			                'uid' => $_POST['uid'],	
+			                'u_id'=> $result['id'],		                
+			                'token' => $_POST['token'],
+			                'type' => $_POST['type'],
+			                'linked'=>1
+			     );
+			$this->User_model->link_sns_to_user($temp);
+			$this->db->from('user_einfo');
+			$this->db->where('id', $temp['u_id']);
+			$this->db->update('avatar', $session['userdata']['screen_name']);
+			$result=$this->User_model->get_user($data['email']);
+			$session = array(
+				'id' => $result['id'],
+				'email' => $result['email'],
+				'real_name' => $result['real_name'],
+				'avatar' => $result['avatar'],
+				'is_login'=>1,
+			);
+			$this->session->set_userdata($session);	
+			$mdata['jump_url']=site_url();
+		}
+		else{
+			$mdata['message']="抱歉，由于系统问题造成注册失败！请联系相关人员。";
+			$mdata['title']="注册失败";
+			$mdata['message_type']="error";
+			$mdata['jump_url']=site_url();
+		}
+		$this->load->view('message',$mdata);
 		}
 	}
 	public function regist_sns(){
