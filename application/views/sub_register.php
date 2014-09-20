@@ -43,7 +43,7 @@
 
     
    
-      <div id="legend" class="">
+      <div id="legend2" class="">
 	      
         <legend class=""><input type="radio" name="userstatus" id="newuser" value="accept"   /> 绑定-新账号</legend>
       </div> 
