@@ -318,7 +318,7 @@ $(function() {
 		}
 	}
 		
-	if($("#olduser")..is(':checked')){
+	if($("#olduser").is(':checked')){
 		if(user_email_check()&&user_pass_check())
 		{
 			//ajax登录
@@ -359,7 +359,7 @@ $(function() {
 		}
 	}
 	
-}
+})
 });
 
 
