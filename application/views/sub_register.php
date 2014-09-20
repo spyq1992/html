@@ -114,7 +114,7 @@
             <span class="prompt" id="captcha_prompt"></span>
           </div>
         </div>
-
+ <?=form_close() ?>
 
 
 	
@@ -122,7 +122,7 @@
       <button type="button" class="btn btn-large" type="button" name="submit2" id="link-btn" style="margin-left:275px;">绑定</button>
     </div>
     </fieldset>
-    <?=form_close() ?>
+   
 
     </div>
    
