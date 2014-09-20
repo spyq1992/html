@@ -57,7 +57,7 @@
 		}
 	});
 });
-
+	})
 $(function() {
 	$("#captcha").click(function(){
 		$capt=$("#captcha").val();
