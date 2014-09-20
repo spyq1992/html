@@ -55,7 +55,7 @@ $("#newuser").click(function(){
 	$("#control7").show(500);
 	
 	});
-})	
+});	
 
 $(function() {
 	$("#control1").show();
@@ -74,10 +74,8 @@ $(function() {
 		$("#control5").hide(500);
 		$("#control6").hide(500);
 		$("#control7").hide(500);
-		
-		
 	});
-	})
+	});
 
 $(function() {
 	$("#email").blur(function(){
