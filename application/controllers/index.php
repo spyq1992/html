@@ -294,7 +294,7 @@ class Index extends CI_Controller {
 					$this->load->view('sub_register',$data);
 				}
 			}
-else redirect('/index');
+
 			
 	}
 	public function loginWithWeibo(){

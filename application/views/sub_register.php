@@ -5,7 +5,7 @@
   <div class="row">
     <div class="span8">
 
-  <?=form_open('index/link_sns','class="form-horizontal"') ?>
+  
   <fieldset>
       <div id="legend" class="">
       	
@@ -55,7 +55,7 @@
       <div id="legend" class="">
 	      
         <legend class=""><input type="radio" name="userstatus" id="newuser" value="accept"   /> 绑定-新账号</legend>
-      </div> <?=form_close() ?><?=form_open('index/regist_sns','class="form-horizontal"') ?>
+      </div> 
     <div class="control-group" id='control4'>
 
           <!-- Text input-->
@@ -123,7 +123,7 @@
       <button type="button" class="btn btn-large" type="button" name="submit2" id="regis-submit-btn" style="margin-left:275px;">注册</button>
     </div>
     </fieldset>
-     <?=form_close() ?>
+    
 
     </div>
    
