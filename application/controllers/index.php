@@ -164,7 +164,7 @@ class Index extends CI_Controller {
 			//成功设置session
 			$result=$this->User_model->get_user($data['email']);
 			$temp = array(
-			                'uid' => $_POST['uid'],	
+			                'uid' => $session['uid'],	
 			                'u_id'=> $result['id'],			                		                
 			                'token' => $_POST['token'],
 			                'type' => $_POST['type'],
