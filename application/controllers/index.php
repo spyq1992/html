@@ -205,10 +205,10 @@ class Index extends CI_Controller {
 			$mdata['message_type']="success";
 			$result=$this->User_model->get_user($data['email']);
 			$temp = array(
-			                'uid' => $_POST['uid'],	
+			                'uid' => $session['uid'],	
 			                'u_id'=> $result['id'],		                
-			                'token' => $_POST['token'],
-			                'type' => $_POST['type'],
+			                'token' => $session['token'],
+			                'type' => $session['type'],
 			                'linked'=>1
 			     );
 			$this->User_model->link_sns_to_user($temp);

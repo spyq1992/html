@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url('resource/css/bootstrap.min.css') ?>" />
     <link rel="stylesheet" type="text/css" href="<?=base_url('resource/css/style.css') ?>" />
     <link rel="stylesheet" type="text/css" href="<?=base_url('resource/css/welcome.css') ?>" />
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=aRAsgmt3lDFkyIDdD6VAAuUO"></script>
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=aRAsgmt3lDFkyIDdD6VAAuUO"></script> -->
     <script type="text/javascript" src="<?=base_url('resource/js/jquery-1.11.0.min.js') ?>"></script>
     <script type="text/javascript" src="<?=base_url('resource/js/bootstrap.min.js') ?>"></script>
     <? $this->load->view('inc/css_view') ?>
