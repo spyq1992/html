@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="span8">
 
-				<?=form_open('index/link_sns', 'class="form-horizontal"') ?>
+				
 				<fieldset>
 					<div id="legend" class="">
 
@@ -111,7 +111,7 @@
 					</button>
 				</div>
 
-				<?=form_close() ?>
+				
 
 			</div>
 
