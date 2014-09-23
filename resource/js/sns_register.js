@@ -223,7 +223,7 @@ $(function() {
 		{
 			$.ajax({
 	              type:"post",
-	              data: "user_status=new"+"email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"name="+$("#name").val(),
+	              data: "user_status=new"+"&email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"&name="+$("#name").val(),
 	              url:"/index/regist_sns",
 	               success: function(result)
 	               {
@@ -277,7 +277,7 @@ $(function() {
 			//成功跳转至首页，失败显示错误原因
 			$.ajax({
 	              type:"post",
-	              data: "user_status=old"+"email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
+	              data: "user_status=old"+"&email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val(),
 	              url:"/index/link_sns",
 	               success: function(result)
 	               {
