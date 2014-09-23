@@ -224,7 +224,7 @@ $(function() {
 			$.ajax({
 	              type:"post",
 	              data: "user_status=new"+"email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"name="+$("#name").val(),
-	              url:"/index/link_sns",
+	              url:"/index/regist_sns",
 	               success: function(result)
 	               {
 	                    if(result=='suc')
