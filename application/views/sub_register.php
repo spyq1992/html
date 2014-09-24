@@ -4,8 +4,7 @@
 	$uid=$this->session->userdata('uid');
 	$type=$this->session->userdata('type');
 }
-var_dump($this->session->all_userdata());
-var_dump($this->session->all_userdata());
+
 ?>
 <body>
 	<? $this->load->view('inc/nav_view') ?>
@@ -15,8 +14,9 @@ var_dump($this->session->all_userdata());
 
 				
 				<fieldset>
+					<input type="hidden" id="session" value="<?'&token='+$token+'&uid='+$uid+'&type='+$type?>"/>
 					<div id="legend" class="">
-
+			
 						<legend class="">
 							<input type="radio" name="userstatus" id="olduser" value="accept" checked="checked"  />
 							绑定-已有账号
