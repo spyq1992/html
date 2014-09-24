@@ -275,6 +275,7 @@ $(function() {
 		{
 			//ajax登录
 			//成功跳转至首页，失败显示错误原因
+			alert($("#session").attr("value"));
 			$.ajax({
 	              type:"post",
 	              data: "user_status=old"+"&email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val()+$("#session").attr("value"),
