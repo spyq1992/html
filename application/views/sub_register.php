@@ -44,6 +44,11 @@
 							<span class="prompt" id="user_pwd_prompt"></span>
 						</div>
 					</div>
+					 <div class="control-group">
+		          <div class="controls">
+		          <span class="prompt" id="login_prompt"></span>
+		          </div>
+		        </div>
 
 					<div id="legend2" class="">
 
