@@ -93,7 +93,7 @@
 			                'u_id'=> $data['id'],
 			                'uid' => $data['uid'],			                
 			                'token' => $data['token'],
-			                'type' => $date['type'],
+			                'type' => $data['type'],
 			                'linked'=>1
 			     );
 			$this->db->insert('user_sns', $newdata);
@@ -103,7 +103,7 @@
 			                'u_id'=> $data['id'],
 			                'uid' => $data['uid'],			                
 			                'token' => $data['token'],
-			                'type' => $date['type'],
+			                'type' => $data['type'],
 			                'linked'=>0
 			     );
 			$this->db->insert('user_sns', $newdata);
