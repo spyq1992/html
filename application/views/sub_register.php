@@ -1,5 +1,12 @@
 <? $this->load->view('inc/header_view')?>
-<? if($this->session->userdata(is_login))?>
+<? if($this->session->userdata('token')){
+	$token=$this->session->userdata('token');
+	$uid=$this->session->userdata('uid');
+	$type=$this->session->userdata('type');
+}
+var_dump($this->session->all_userdata());
+var_dump($this->session->all_userdata());
+?>
 <body>
 	<? $this->load->view('inc/nav_view') ?>
 	<div class="container">
