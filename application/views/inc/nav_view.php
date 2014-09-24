@@ -17,6 +17,7 @@
 		$email=$this->session->userdata('email');
 		$id=$this->session->userdata('id');
 		$avatar=$this->session->userdata('avatar');
+		$session=$this->session->all_userdata();
 		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
  }
  }
