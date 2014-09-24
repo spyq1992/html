@@ -1,5 +1,5 @@
-<? $this->load->view('inc/header_view')
-?>
+<? $this->load->view('inc/header_view')?>
+<? if($this->session->userdata(is_login))?>
 <body>
 	<? $this->load->view('inc/nav_view') ?>
 	<div class="container">

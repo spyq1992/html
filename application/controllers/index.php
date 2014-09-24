@@ -324,17 +324,18 @@ class Index extends CI_Controller {
 					$this->load->view('sinacallback',$data);
 				}
 				else{
-					$session=array(
+					$data=array(
 						'uid'=>$uid['uid'],
 						'type'=>'weibo',
 						'userdata'=>$userdata,
 						'newuser'=> 1,
+						'title'=>$userdata['screen_name'],
+						'css'=> array('welcome.css'),
+						'js'=> array('sns_register.js'),
 						'is_login'=> 0
 					);
-					$data['title'] = $userdata['screen_name'];
-					$data['css'] = array('welcome.css');
-					$data['js'] = array('sns_register.js');
-					$this->session->set_userdata($session);
+					
+					$this->session->set_userdata($data);
 					$this->load->view('sub_register',$data);
 				}
 			}

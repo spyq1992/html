@@ -9,23 +9,23 @@
 	// else{
 		// $is_login=0;
 	// }
-	if($this->session->userdata('is_login'))
-	{
-		if($this->session->userdata('is_login')==1)	{
-		$is_login=1;
-		$name=$this->session->userdata('real_name');
-		$email=$this->session->userdata('email');
-		$id=$this->session->userdata('id');
-		$avatar=$this->session->userdata('avatar');
-		$session=$this->session->all_userdata();
-		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
-		var_dump($session);
- }
-		var_dump($session);
- }
-	else{
-		$is_login=0;
-	}
+	// if($this->session->userdata('is_login'))
+	// {
+		// if($this->session->userdata('is_login')==1)	{
+		// $is_login=1;
+		// $name=$this->session->userdata('real_name');
+		// $email=$this->session->userdata('email');
+		// $id=$this->session->userdata('id');
+		// $avatar=$this->session->userdata('avatar');
+		// $session=$this->session->all_userdata();
+		// $avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
+		// var_dump($session);
+ // }
+		// var_dump($session);
+ // }
+	// else{
+		// $is_login=0;
+	// }
 ?>
  <script type="text/javascript" src="<?=site_url("/resource/js/message_query.js") ?>"></script>
 <div class="navbar">
