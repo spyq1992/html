@@ -21,6 +21,7 @@
 		$avatar_id=($avatar==$data['profile_image_url'])?('default'):($id);
 		var_dump($session);
  }
+		var_dump($session);
  }
 	else{
 		$is_login=0;
