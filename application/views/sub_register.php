@@ -1,9 +1,9 @@
 <? $this->load->view('inc/header_view')?>
-<? if($this->session->userdata('token')){
+<? 
 	$token=$this->session->userdata('token');
 	$uid=$this->session->userdata('uid');
 	$type=$this->session->userdata('type');
-}
+
 
 ?>
 <body>
