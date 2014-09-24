@@ -223,7 +223,7 @@ $(function() {
 		{
 			$.ajax({
 	              type:"post",
-	              data: "user_status=new"+"&email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"&name="+$("#name").val()+$("#session").val(),
+	              data: "user_status=new"+"&email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"&name="+$("#name").val()+$("#session").attr("value"),
 	              url:"/index/regist_sns",
 	               success: function(result)
 	               {
