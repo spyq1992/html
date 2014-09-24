@@ -277,7 +277,7 @@ $(function() {
 			//成功跳转至首页，失败显示错误原因
 			$.ajax({
 	              type:"post",
-	              data: "user_status=old"+"&email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val()+$("#session").val(),
+	              data: "user_status=old"+"&email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val()+$("#session").attr("value"),
 	              url:"/index/link_sns",
 	               success: function(result)
 	               {
