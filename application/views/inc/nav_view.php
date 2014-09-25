@@ -1,14 +1,14 @@
 <?php 
-	if($this->session->userdata('is_login')==1){
-		
-		$session=$this->session->all_userdata();
-		$name=$session['userdata']['screen_name'];
-		$id=$session['uid'];
-		$is_login=1;
-	}
-	else{
-		$is_login=0;
-	}
+	// if($this->session->userdata('is_login')==1){
+// 		
+		// $session=$this->session->all_userdata();
+		// $name=$session['userdata']['screen_name'];
+		// $id=$session['uid'];
+		// $is_login=1;
+	// }
+	// else{
+		// $is_login=0;
+	// }
 	// if($this->session->userdata('is_login'))
 	// {
 		// if($this->session->userdata('is_login')==1)	{
