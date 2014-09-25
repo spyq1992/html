@@ -327,6 +327,7 @@ class Index extends CI_Controller {
 					$data=array(
 						'uid'=>$uid['uid'],
 						'type'=>'weibo',
+						'token'=> $token,
 						'userdata'=>$userdata,
 						'newuser'=> 1,
 						'title'=>$userdata['screen_name'],
