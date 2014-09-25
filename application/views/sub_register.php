@@ -3,7 +3,8 @@
 	$token=$this->session->userdata('token');
 	$uid=$this->session->userdata('uid');
 	$type=$this->session->userdata('type');
-echo "&token="+$token+"&uid="+$uid+"&type="+$type
+echo "&token="+$token+"&uid="+$uid+"&type="+$type;
+var_dump($token);
 
 ?>
 <body>
