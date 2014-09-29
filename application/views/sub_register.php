@@ -1,14 +1,13 @@
 <? $this->load->view('inc/header_view')?>
 <? 
-	if($this->session->userdata('is_login')){
-	$token=$this->session->userdata('token');
-	$uid=$this->session->userdata('uid');
-	$type=$this->session->userdata('type');
-
+	
+if(isset($is_login)){
+	
+}
 var_dump($token);
 var_dump($type);
 var_dump($uid);
-}
+
 ?>
 <body>
 	<? $this->load->view('inc/nav_view') ?>
