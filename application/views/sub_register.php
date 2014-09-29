@@ -4,7 +4,7 @@
 	$token=$this->session->userdata('token');
 	$uid=$this->session->userdata('uid');
 	$type=$this->session->userdata('type');
-echo "&token="+$token+"&uid="+$uid+"&type="+$type;
+
 var_dump($token);
 var_dump($type);
 var_dump($uid);
@@ -18,7 +18,7 @@ var_dump($uid);
 
 				
 				<fieldset>
-					<input type="hidden" id="user_session"/><?php echo '&token='+$token+'&uid='+$uid+'&type='+$type;?><br>
+					<input type="hidden" id="user_session"/><?='&token='+$token+'&uid='+$uid+'&type='+$type;?><br>
 					
 					<div id="legend" class="">
 			

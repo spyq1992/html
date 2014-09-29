@@ -7,4 +7,3 @@
 	<script type="text/javascript" src="<?=base_url('resource/js/' . $js) ?>"></script>
 	<? endif ?>
 <? endif; ?>
-</head>
