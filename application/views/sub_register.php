@@ -1,5 +1,6 @@
 <? $this->load->view('inc/header_view')?>
 <? 
+	if($this->session->userdata('is_login')){
 	$token=$this->session->userdata('token');
 	$uid=$this->session->userdata('uid');
 	$type=$this->session->userdata('type');
@@ -7,7 +8,7 @@ echo "&token="+$token+"&uid="+$uid+"&type="+$type;
 var_dump($token);
 var_dump($type);
 var_dump($uid);
-
+}
 ?>
 <body>
 	<? $this->load->view('inc/nav_view') ?>
@@ -17,7 +18,7 @@ var_dump($uid);
 
 				
 				<fieldset>
-					<input type="hidden" id="user_session" value="<? echo '&token='+$token+'&uid='+$uid+'&type='+$type ?>"/>
+					<input type="hidden" id="user_session"/><?echo "&token="+$token+"&uid="+$uid+"&type="+$type;?><br>
 					
 					<div id="legend" class="">
 			

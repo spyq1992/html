@@ -278,7 +278,7 @@ $(function() {
 			
 			$.ajax({
 	              type:"post",
-	              data: "user_status=old"+"&email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val()+$("#user_session").attr("value"),
+	              data: "user_status=old"+"&email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val()+$("#user_session").val(),
 	              url:"/index/link_sns",
 	               success: function(result)
 	               {
