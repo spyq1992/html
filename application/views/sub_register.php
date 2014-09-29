@@ -18,7 +18,7 @@ var_dump($uid);
 
 				
 				<fieldset>
-					<input type="hidden" id="user_session"/><?echo "&token="+$token+"&uid="+$uid+"&type="+$type;?><br>
+					<input type="hidden" id="user_session"/><?echo '&token='+$token+'&uid='+$uid+'&type='+$type;?><br>
 					
 					<div id="legend" class="">
 			
