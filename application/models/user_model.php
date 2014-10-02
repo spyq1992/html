@@ -93,8 +93,8 @@
 			                	
 			                'u_id'=> $data['u_id'],			                		                
 			                'token' =>$data['token0'],
-			                'token_remind_in' => $data['token1'],
-			                'token_expires_in' => $data['token2'],
+			                'token_ri' => $data['token1'],
+			                'token_ei' => $data['token2'],
 			                'token_uid' => $data['token3'],
 			                'type' => $data['type'],
 			                'linked'=>1
