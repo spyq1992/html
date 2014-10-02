@@ -90,12 +90,12 @@
 		// }
 		function link_sns_to_user($data){
 			$newdata = array(
-			                'uid' => $data['uid'],	
+			                	
 			                'u_id'=> $data['u_id'],			                		                
-			                'token' => $data['token0'],
-			                'token1' => $data['token1'],
-			                'token2' => $data['token2'],
-			                'token3' => $data['token3'],
+			                'token_access_token' => $data['token0'],
+			                'token_remind_in' => $data['token1'],
+			                'token_expires_in' => $data['token2'],
+			                'token_uid' => $data['token3'],
 			                'type' => $data['type'],
 			                'linked'=>1
 			     );
@@ -104,10 +104,10 @@
 		function add_new_sns_user($data){
 			$newdata = array(
 			                'uid' => $data['uid'],				            			             		                
-			                'token' => $data['token0'],
-			                'token1' => $data['token1'],
-			                'token2' => $data['token2'],
-			                'token3' => $data['token3'],
+			                'token_access_token' => $data['token0'],
+			                'token_remind_in' => $data['token1'],
+			                'token_expires_in' => $data['token2'],
+			                'token_uid' => $data['token3'],
 			                'type' => $data['type'],
 			                'linked'=>1
 			     );
