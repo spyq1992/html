@@ -166,7 +166,10 @@ class Index extends CI_Controller {
 			$temp = array(
 			                'uid' => $_POST['uid'],	
 			                'u_id'=> $result['id'],			                		                
-			                'token' => $_POST['token'],
+			                'token0' => $_POST['token']['access_token'],
+			                'token1' => $_POST['token']['remind_in'],
+			                'token2' => $_POST['token']['expires_in'],
+			                'token3' => $_POST['token']['uid'],
 			                'type' => $_POST['type'],
 			                'linked'=>1
 			     );
@@ -205,10 +208,13 @@ class Index extends CI_Controller {
 			$mdata['message_type']="success";
 			$result=$this->User_model->get_user($data['email']);
 			$temp = array(
-			                'uid' => $session['uid'],	
+			                'uid' => $_POST['uid'],	
 			                'u_id'=> $result['id'],		                
-			                'token' => $session['token'],
-			                'type' => $session['type'],
+			                'token0' => $_POST['token']['access_token'],
+			                'token1' => $_POST['token']['remind_in'],
+			                'token2' => $_POST['token']['expires_in'],
+			                'token3' => $_POST['token']['uid'],
+			                'type' => $_POST['type'],
 			                'linked'=>1
 			     );
 			$this->User_model->link_sns_to_user($temp);

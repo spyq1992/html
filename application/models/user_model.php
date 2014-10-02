@@ -92,7 +92,10 @@
 			$newdata = array(
 			                'uid' => $data['uid'],	
 			                'u_id'=> $data['id'],			                		                
-			                'token' => $data['token'],
+			                'token0' => $data['token0'],
+			                'token1' => $data['token1'],
+			                'token2' => $data['token2'],
+			                'token3' => $data['token3'],
 			                'type' => $data['type'],
 			                'linked'=>1
 			     );
@@ -101,10 +104,13 @@
 		function add_new_sns_user($data){
 			$newdata = array(
 			                'uid' => $data['uid'],	
-			            			                		                
-			                'token' => $data['token'],
+			                'u_id'=> $data['id'],			             		                
+			                'token0' => $data['token0'],
+			                'token1' => $data['token1'],
+			                'token2' => $data['token2'],
+			                'token3' => $data['token3'],
 			                'type' => $data['type'],
-			                'linked'=>0
+			                'linked'=>1
 			     );
 			$this->db->insert('user_sns', $newdata);
 		}
