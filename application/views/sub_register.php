@@ -10,10 +10,10 @@
 				<fieldset>
 					<input type="hidden" id="uid" name='uid' value="<?=$uid?>" />
 					<input type="hidden" id="type" name='type' value="<?=$type?>" />
-					<input type="hidden" id="token[1]" name="token['access_token']" value="<?=$token['access_token']?>" />
-					<input type="hidden" id="token[2]" name="token['remind_in']" value="<?=$token['remind_in']?>" />
-					<input type="hidden" id="token[3]" name="token['expires_in']" value="<?=$token['expires_in']?>" />
-					<input type="hidden" id="token[4]" name="token['uid']" value="<?=$token['uid']?>" />
+					<input type="hidden" id="token[1]" name="access_token" value="<?=$token['access_token']?>" />
+					<input type="hidden" id="token[2]" name="remind_in" value="<?=$token['remind_in']?>" />
+					<input type="hidden" id="token[3]" name="expires_in" value="<?=$token['expires_in']?>" />
+					<input type="hidden" id="token[4]" name="uid" value="<?=$token['uid']?>" />
 					<div id="legend" class="">
 			
 						<legend class="">

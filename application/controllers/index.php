@@ -166,10 +166,10 @@ class Index extends CI_Controller {
 			$temp = array(
 			                'uid' => $_POST['uid'],	
 			                'u_id'=> $result['id'],			                		                
-			                'token0' => $_POST['token']['access_token'],
-			                'token1' => $_POST['token']['remind_in'],
-			                'token2' => $_POST['token']['expires_in'],
-			                'token3' => $_POST['token']['uid'],
+			                'token0' => $_POST['access_token'],
+			                'token1' => $_POST['remind_in'],
+			                'token2' => $_POST['expires_in'],
+			                'token3' => $_POST['uid'],
 			                'type' => $_POST['type'],
 			                'linked'=>1
 			     );
@@ -210,10 +210,10 @@ class Index extends CI_Controller {
 			$temp = array(
 			                'uid' => $_POST['uid'],	
 			                'u_id'=> $result['id'],		                
-			                'token0' => $_POST['token']['access_token'],
-			                'token1' => $_POST['token']['remind_in'],
-			                'token2' => $_POST['token']['expires_in'],
-			                'token3' => $_POST['token']['uid'],
+			                'token0' => $_POST['access_token'],
+			                'token1' => $_POST['remind_in'],
+			                'token2' => $_POST['expires_in'],
+			                'token3' => $_POST['uid'],
 			                'type' => $_POST['type'],
 			                'linked'=>1
 			     );

@@ -91,7 +91,7 @@
 		function link_sns_to_user($data){
 			$newdata = array(
 			                'uid' => $data['uid'],	
-			                'u_id'=> $data['id'],			                		                
+			                'u_id'=> $data['u_id'],			                		                
 			                'token0' => $data['token0'],
 			                'token1' => $data['token1'],
 			                'token2' => $data['token2'],
@@ -103,8 +103,7 @@
 		}
 		function add_new_sns_user($data){
 			$newdata = array(
-			                'uid' => $data['uid'],	
-			                'u_id'=> $data['id'],			             		                
+			                'uid' => $data['uid'],				            			             		                
 			                'token0' => $data['token0'],
 			                'token1' => $data['token1'],
 			                'token2' => $data['token2'],
