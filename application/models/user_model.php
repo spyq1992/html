@@ -92,7 +92,7 @@
 			$newdata = array(
 			                'uid' => $data['uid'],	
 			                'u_id'=> $data['u_id'],			                		                
-			                'token0' => $data['token0'],
+			                'token' => $data['token0'],
 			                'token1' => $data['token1'],
 			                'token2' => $data['token2'],
 			                'token3' => $data['token3'],
@@ -104,7 +104,7 @@
 		function add_new_sns_user($data){
 			$newdata = array(
 			                'uid' => $data['uid'],				            			             		                
-			                'token0' => $data['token0'],
+			                'token' => $data['token0'],
 			                'token1' => $data['token1'],
 			                'token2' => $data['token2'],
 			                'token3' => $data['token3'],
