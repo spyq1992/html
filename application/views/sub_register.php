@@ -15,9 +15,10 @@ var_dump($token['access_token']);
 		<div class="row">
 			<div class="span8">
 
-				 <?=form_open('index/do_login','class="form-horizontal"') ?>
+				 <?=form_open('index/link_sns','class="form-horizontal"') ?>
 				<fieldset>
-					<input type="hidden" id="uid+type" value="<?='uid='+$uid+'&type='+$type;?>" />
+					<input type="hidden" id="uid" name='uid' value="<?=$uid?>" />
+					<input type="hidden" id="type" name='type' value="<?=$type?>" />
 					<input type="hidden" id="token[1]" name="token['access_token']" value="<?=$token['access_token']?>" />
 					<input type="hidden" id="token[2]" name="token['remind_in']" value="<?=$token['remind_in']?>" />
 					<input type="hidden" id="token[3]" name="token['expires_in']" value="<?=$token['expires_in']?>" />
@@ -25,7 +26,7 @@ var_dump($token['access_token']);
 					<div id="legend" class="">
 			
 						<legend class="">
-							<input type="radio" name="userstatus" id="olduser" value="accept" checked="checked"  />
+							<input type="radio" name="olduser" id="olduser" value="accept" checked="checked"  />
 							绑定-已有账号
 						</legend>
 					</div>
@@ -59,7 +60,7 @@ var_dump($token['access_token']);
 					<div id="legend2" class="">
 
 						<legend class="">
-							<input type="radio" name="userstatus" id="newuser" value="accept"   />
+							<input type="radio" name="newuser" id="newuser" value="accept"   />
 							绑定-新账号
 						</legend>
 					</div>
