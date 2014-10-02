@@ -166,8 +166,8 @@ class Index extends CI_Controller {
 			$temp = array(
 			                	
 			                'u_id'=> $result['id'],			                		                
-			                'token0' => $_POST['access_token'],
-			                'token1' => $_POST['remind_in'],
+			                'token0' => mysql_real_escape_string($_POST['access_token']),
+			                'token1' => mysql_real_escape_string($_POST['remind_in']),
 			                'token2' => $_POST['expires_in'],
 			                'token3' => $_POST['uid'],
 			                'type' => $_POST['type'],
