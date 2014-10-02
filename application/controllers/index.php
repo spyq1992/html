@@ -154,7 +154,7 @@ class Index extends CI_Controller {
     }
 	
 	public function link_sns(){
-		if($_POST['user_status']=="old"){
+		if(isset($_POST['olduser'])){
 		
 		$data['email']=$_POST['email_in'];
     	$data['password']=$_POST['password_in'];

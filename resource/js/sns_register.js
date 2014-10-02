@@ -217,29 +217,11 @@ $(function() {
 	});
 	$("#link-btn").click(function(){
 		
+		
 		if($("#newuser").is(':checked')){
 			if(($("#email_code").val()=='3')&&name_check()&&pass_check()&&cpass_check()&&($("#captcha_code").val()=='1'))
 			{
-				$.ajax({
-		              type:"post",
-		              data: "user_status=new"+"&email=" + $("#email").val()+"&pwd="+$("#pwd").val()+"&name="+$("#name").val()+$("#session").attr("value"),
-		              url:"/index/regist_sns",
-		               success: function(result)
-		               {
-		                    if(result=='suc')
-		                    {
-		                    	$("#login_prompt").css({color:"green"});
-								$("#login_prompt").text('登录成功！');
-		                    	location.href="/index"; 
-		                    }
-		                   
-		               },                       
-		               error: function()
-		               {
-		                    alert("系统错误，请稍候重试...");
-		               
-			}
-				});
+				$("form").submit(function(e)) ;                   
 			}
 				
 			else{
@@ -272,34 +254,21 @@ $(function() {
 		if($("#olduser").is(':checked')){
 			if(user_email_check()&&user_pass_check())
 			{
-				//ajax登录
-				//成功跳转至首页，失败显示错误原因
-				
-				$.ajax({
-		              type:"post",
-		              data: "user_status=old"+"&email_in=" + $("#user_email").val()+"&password_in="+$("#user_pwd").val()+$("#user_session").val(),
-		              url:"/index/link_sns",
-		               success: function(result)
-		               {
-		                    if(result=='suc')
+				$("form").submit(function(e){
+		                    if(e.result=='suc')
 		                    {
 		                    	$("#login_prompt").css({color:"green"});
 								$("#login_prompt").text('登录成功！');
 		                    	location.href="/index"; 
 		                    }
-		                    else if(result=='emptyemail'){
+		                    else if(e.result=='emptyemail'){
 		                    	$("#login_prompt").css({color:"red"});
 								$("#login_prompt").text('用户不存在！');
 		                    }
-		                    else if(result=='wrongpwd'){
+		                    else if(e.result=='wrongpwd'){
 		                    	$("#login_prompt").css({color:"red"});
 								$("#login_prompt").text('密码错误！');
 		                    }
-		               },                       
-		               error: function()
-		               {
-		            	   alert($("#session").attr("value")); 
-		            	   alert("系统错误，请稍候重试...");
 		               }
 		        });
 
