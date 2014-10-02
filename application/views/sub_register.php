@@ -7,7 +7,7 @@ if(isset($is_login)){
 var_dump($token);
 var_dump($type);
 var_dump($uid);
-
+var_dump($token['access_token']);
 ?>
 <body>
 	<? $this->load->view('inc/nav_view') ?>
@@ -15,7 +15,7 @@ var_dump($uid);
 		<div class="row">
 			<div class="span8">
 
-				
+				 <?=form_open('index/do_login','class="form-horizontal"') ?>
 				<fieldset>
 					<input type="hidden" id="uid+type" value="<?='uid='+$uid+'&type='+$type;?>" />
 					<input type="hidden" id="token[1]" name="token['access_token']" value="<?=$token['access_token']?>" />
@@ -123,14 +123,15 @@ var_dump($uid);
 						</div>
 					</div>
 
-				</fieldset>
+				
 				<div class="sub-btn" id='control8'>
 					<button type="button" class="btn btn-large" type="button" name="submit2" id="link-btn" style="margin-left:275px;">
 						绑定
 					</button>
 					<input type="submit"  value="提交" />
 				</div>
-
+				</fieldset>
+				<?=form_close() ?>
 				
 
 			</div>
