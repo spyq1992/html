@@ -92,7 +92,7 @@
 			$newdata = array(
 			                	
 			                'u_id'=> $data['u_id'],			                		                
-			                'tokenaccess' =>$data['token0'],
+			                'token' =>$data['token0'],
 			                'token_remind_in' => $data['token1'],
 			                'token_expires_in' => $data['token2'],
 			                'token_uid' => $data['token3'],
