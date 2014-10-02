@@ -91,11 +91,11 @@
 		function link_sns_to_user($data){
 			$newdata = array(
 			                	
-			                'u_id'=> $data['u_id'],			                		                
+			                'u_id'=>$data['u_id'],			                		                
 			                'token' =>$data['token0'],
-			                'remind' => $data['token1'],
-			                'token_ei' => $data['token2'],
-			                'token_uid' => $data['token3'],
+			                'remind'=>$data['token1'],
+			                'token_ei'=>$data['token2'],
+			                'token_uid'=>$data['token3'],
 			                'type' => $data['type'],
 			                'linked'=>1
 			     );
