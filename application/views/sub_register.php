@@ -17,8 +17,11 @@ var_dump($uid);
 
 				
 				<fieldset>
-					<input type="hidden" id="user_session"/><?='&token='+$token+'&uid='+$uid+'&type='+$type;?><br>
-					
+					<input type="hidden" id="uid+type" value="<?='uid='+$uid+'&type='+$type;?>" />
+					<input type="hidden" id="token[1]" name="token[access_token]" value="<?=$token[0]?>" />
+					<input type="hidden" id="token[2]" name="token[remind_in]" value="<?=$token[1]?>" />
+					<input type="hidden" id="token[3]" name="token[expires_in]" value="<?=$token[2]?>" />
+					<input type="hidden" id="token[4]" name="token[uid]" value="<?=$token[3]?>" />
 					<div id="legend" class="">
 			
 						<legend class="">
@@ -125,6 +128,7 @@ var_dump($uid);
 					<button type="button" class="btn btn-large" type="button" name="submit2" id="link-btn" style="margin-left:275px;">
 						绑定
 					</button>
+					<input type="submit"  value="提交" />
 				</div>
 
 				
