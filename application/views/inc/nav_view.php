@@ -2,8 +2,9 @@
 	if($this->session->userdata('is_login')==1){
 		
 		$session=$this->session->all_userdata();
-		$name=$session['userdata']['screen_name'];
+		$name=$session['real_name'];
 		$id=$session['uid'];
+		$avatar=$session['avadar'];
 		$is_login=1;
 	}
 	else{

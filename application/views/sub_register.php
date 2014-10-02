@@ -1,14 +1,5 @@
 <? $this->load->view('inc/header_view')?>
-<? 
-	
-if(isset($is_login)){
-	
-}
-var_dump($token);
-var_dump($type);
-var_dump($uid);
-var_dump($token['access_token']);
-?>
+
 <body>
 	<? $this->load->view('inc/nav_view') ?>
 	<div class="container">
