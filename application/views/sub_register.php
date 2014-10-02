@@ -60,7 +60,7 @@ var_dump($token['access_token']);
 					<div id="legend2" class="">
 
 						<legend class="">
-							<input type="radio" name="newuser" id="newuser" value="accept"   />
+							<input type="radio" name="olduser" id="newuser" value="accept"   />
 							绑定-新账号
 						</legend>
 					</div>
