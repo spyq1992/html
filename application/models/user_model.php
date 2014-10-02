@@ -93,7 +93,7 @@
 			                	
 			                'u_id'=> $data['u_id'],			                		                
 			                'token' =>$data['token0'],
-			                'tokenri' => $data['token1'],
+			                'ri' => $data['token1'],
 			                'token_ei' => $data['token2'],
 			                'token_uid' => $data['token3'],
 			                'type' => $data['type'],
