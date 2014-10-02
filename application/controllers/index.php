@@ -180,7 +180,7 @@ class Index extends CI_Controller {
 			);
 			$this->session->set_userdata($session);	
 			
-			echo 'suc';
+			redirect('/index');
 		}
 		else{
 			$email_validate=$this->User_model->get_email($data['email']);
