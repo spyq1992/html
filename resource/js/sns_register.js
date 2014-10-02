@@ -221,7 +221,7 @@ $(function() {
 		if($("#newuser").is(':checked')){
 			if(($("#email_code").val()=='3')&&name_check()&&pass_check()&&cpass_check()&&($("#captcha_code").val()=='1'))
 			{
-				$("form").submit(function(e)) ;                   
+				$("form").submit() ;                   
 			}
 				
 			else{
@@ -269,16 +269,16 @@ $(function() {
 		                    	$("#login_prompt").css({color:"red"});
 								$("#login_prompt").text('密码错误！');
 		                    }
-		               }
+		                    else{
+		                    	alert("登录信息填写有误，请检查！");
+		                    }
 		        });
 
 				//$(".log-btn").html('');
 				//$(".log-btn").append("<button type='submit' class='btn btn-large' type='button' name='submit' id='login-submit-btn' style='margin-left:275px;'>登录</button>");
 				//$("#login-submit-btn").click();
 			}
-			else{
-				alert("登录信息填写有误，请检查！");
-			}
+			
 		}
 	});
 });
