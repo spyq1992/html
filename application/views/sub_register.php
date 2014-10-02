@@ -18,10 +18,10 @@ var_dump($uid);
 				
 				<fieldset>
 					<input type="hidden" id="uid+type" value="<?='uid='+$uid+'&type='+$type;?>" />
-					<input type="hidden" id="token[1]" name="token[access_token]" value="<?=$token[0]?>" />
-					<input type="hidden" id="token[2]" name="token[remind_in]" value="<?=$token[1]?>" />
-					<input type="hidden" id="token[3]" name="token[expires_in]" value="<?=$token[2]?>" />
-					<input type="hidden" id="token[4]" name="token[uid]" value="<?=$token[3]?>" />
+					<input type="hidden" id="token[1]" name="token['access_token']" value="<?=$token['access_token']?>" />
+					<input type="hidden" id="token[2]" name="token['remind_in']" value="<?=$token['remind_in']?>" />
+					<input type="hidden" id="token[3]" name="token['expires_in']" value="<?=$token['expires_in']?>" />
+					<input type="hidden" id="token[4]" name="token['uid']" value="<?=$token['uid']?>" />
 					<div id="legend" class="">
 			
 						<legend class="">
