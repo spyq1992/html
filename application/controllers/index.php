@@ -324,7 +324,7 @@ class Index extends CI_Controller {
 						'avatar' => $result['avatar'],
 						'is_login'=>1
 					);
-					
+					echo "1";
 					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
