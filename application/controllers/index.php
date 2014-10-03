@@ -316,16 +316,15 @@ class Index extends CI_Controller {
 				
 				if($this->Weibo_model->exist_uid($uid['uid'])){
 					$data=array();
-					$data['title'] = $userdta['screen_name'];
+					$result = $this->weibo_model->get_user_by_uid($uid['uid']);
 					$session=array(
-						'uid'=>$uid['uid'],
-						'type'=>'weibo',
-						'userdata'=>$userdata,
-						'token'=>$token,
-						'newuser'=> 0,
-						'is_login'=> 1,
+						'id' => $result['id'],
+						'email' => $result['email'],
+						'real_name' => $result['real_name'],
+						'avatar' => $result['avatar'],
+						'is_login'=>1
 					);
-					$session = $this->weibo_model->get_user_by_uid($uid['uid']);
+					
 					$this->session->set_userdata($session);
 					$this->load->view('sinacallback',$data);
 				}
@@ -335,7 +334,6 @@ class Index extends CI_Controller {
 						'type'=>'weibo',
 						'token'=> $token,
 						'userdata'=>$userdata,
-						'newuser'=> 1,
 						'title'=>$userdata['screen_name'],
 						'css'=> array('welcome.css'),
 						'js'=> array('sns_register.js'),
