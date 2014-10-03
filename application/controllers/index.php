@@ -314,9 +314,9 @@ class Index extends CI_Controller {
 				$userdata=$this->saetoauthv->get('users/show',$token);
 				
 				
-				if($this->Weibo_model->exist_uid($uid['uid'])){
+				if($this->User_model->exist_uid($uid['uid'])){
 					$data=array();
-					$result = $this->weibo_model->get_user_by_uid($uid['uid']);
+					$result = $this->User_model->get_user_by_uid($uid['uid']);
 					$session=array(
 						'id' => $result['id'],
 						'email' => $result['email'],
