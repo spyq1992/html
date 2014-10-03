@@ -76,7 +76,34 @@
 				$userinfo['real_name']= $row->real_name;
 				$userinfo['id']= $row->id;
 			}
+			$query = $this->db->get_where('user_einfo', array('id' => $userinfo['id']));
+			foreach ($query->result() as $row)
+			{
+				$userinfo['avatar']= $row->avatar;
+			}
 			return $userinfo;
+		}
+		function get_user_by_uid($uid)
+		{
+			$query = $this->db->get_where('sns', array('token_uid' => $uid));
+			foreach ($query->result() as $row)
+			{
+				$id=$row->u_id;
+			}
+			$query = $this->db->get_where('user_ginfo', array('id' => $id));
+			foreach ($query->result() as $row)
+			{
+				$userinfo['email']= $row->email;
+				$userinfo['real_name']= $row->real_name;
+				$userinfo['id']= $row->id;
+			}
+			$query = $this->db->get_where('user_einfo', array('id' => $userinfo['id']));
+			foreach ($query->result() as $row)
+			{
+				$userinfo['avatar']= $row->avatar;
+			}
+			return $userinfo;
+			
 		}
 		// function get_user_by_uid($uid){
 			// $query = $this->db->get_where('user_sns', array('u_id' => $uid));
@@ -100,6 +127,18 @@
 			                'linked'=>1
 			     );
 			$this->db->insert('user_sns', $newdata);
+		}
+		function exist_uid($uid){
+			$this->db->from('user_sns');
+			$this->db->where('token_uid',$uid);
+			$query= $this->db->get();
+			if(count($query->result())==0)
+			{
+				return FALSE;
+			}
+			else{
+				return TURE;
+			}
 		}
 		function add_new_sns_user($data){
 			$newdata = array(
