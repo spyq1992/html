@@ -3,8 +3,8 @@
 		
 		$session=$this->session->all_userdata();
 		$name=$session['real_name'];
-		$id=$session['uid'];
-		$avatar=$session['avadar'];
+		$id=$session['id'];
+		$avatar=$session['avatar'];
 		$is_login=1;
 	}
 	else{
