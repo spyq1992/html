@@ -170,7 +170,7 @@ class Index extends CI_Controller {
 			                'token1' => mysql_real_escape_string($_POST['remind_in']),
 			                'token2' => $_POST['expires_in'],
 			                'token3' => $_POST['uid'],
-			                'type' => $_POST['type'],
+			                'type' => $_POST['type'],			             
 			                'linked'=>1
 			     );
 			$this->User_model->link_sns_to_user($temp);
@@ -207,20 +207,20 @@ class Index extends CI_Controller {
 			$mdata['title']="注册成功";
 			$mdata['message_type']="success";
 			$result=$this->User_model->get_user($data['email']);
-			$temp = array(
-			                'uid' => $_POST['uid'],	
-			                'u_id'=> $result['id'],		                
-			                'token0' => $_POST['access_token'],
-			                'token1' => $_POST['remind_in'],
+				$temp = array(
+			                	
+			                'u_id'=> $result['id'],			                		                
+			                'token0' => mysql_real_escape_string($_POST['access_token']),
+			                'token1' => mysql_real_escape_string($_POST['remind_in']),
 			                'token2' => $_POST['expires_in'],
 			                'token3' => $_POST['uid'],
-			                'type' => $_POST['type'],
+			                'type' => $_POST['type'],			             
 			                'linked'=>1
 			     );
 			$this->User_model->link_sns_to_user($temp);
-			$this->db->from('user_einfo');
-			$this->db->where('id', $temp['u_id']);
-			$this->db->update('avatar', $session['userdata']['screen_name']);
+			// $this->db->from('user_einfo');
+			// $this->db->where('id', $temp['u_id']);
+			// $this->db->update('avatar', $session['userdata']['screen_name']);
 			$result=$this->User_model->get_user($data['email']);
 			$session = array(
 				'id' => $result['id'],
