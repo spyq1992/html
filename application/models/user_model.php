@@ -85,7 +85,7 @@
 		}
 		function get_user_by_uid($uid)
 		{
-			$query = $this->db->get_where('sns', array('token_uid' => $uid));
+			$query = $this->db->get_where('user_sns', array('token_uid' => $uid));
 			foreach ($query->result() as $row)
 			{
 				$id=$row->u_id;
@@ -137,7 +137,7 @@
 				return FALSE;
 			}
 			else{
-				return TURE;
+				return TRUE;
 			}
 		}
 		function add_new_sns_user($data){
